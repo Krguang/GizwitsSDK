@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GizwitsSDK</string>
+    <string name="devicedisconnected">未连接</string>
+</resources>

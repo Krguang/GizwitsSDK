@@ -58,8 +58,6 @@ public class MainActivity extends AppCompatActivity {
     private LVDevicesAdapter adapter;
     private List<GizWifiDevice> gizWifiDeviceList;
     private SwipeRefreshLayout mSwipeRefreshLayout;
-    private View vEmpty;
-
 
     //刷新的弹窗
     private QMUITipDialog refleshTipDialog;
@@ -97,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initView() {
         QMUITopBar topBar = findViewById(R.id.topBar);
-        topBar.setTitle("空调监控");
+        topBar.setTitle("我的设备");
         topBar.addRightImageButton(R.mipmap.scan_botton, R.id.topbar_right_icon).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -125,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
         listView = findViewById(R.id.lv_device);
         adapter = new LVDevicesAdapter(this, gizWifiDeviceList);
         listView.setAdapter(adapter);
-        vEmpty = findViewById(R.id.cl_no_device);
+        View vEmpty = findViewById(R.id.cl_no_device);
 
         //轻触的点击事件
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -226,7 +224,6 @@ public class MainActivity extends AppCompatActivity {
                                 mTipDialog.show();
                                 reloadListView();
                             }
-
                         }
 
                         mSwipeRefreshLayout.postDelayed(new Runnable() {
@@ -310,7 +307,10 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(QMUIDialog dialog, int index) {
                         GizWifiSDK.sharedInstance().unbindDevice(uid, token, device.getDid());
                         dialog.dismiss();
-                        reloadListView();
+
+
+
+                      //  reloadListView();
                     }
                 })
                 .show();

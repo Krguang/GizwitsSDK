@@ -1,26 +1,38 @@
 package com.yy.k.gizwitssdk;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import com.gizwits.gizwifisdk.api.GizWifiDevice;
 import com.gizwits.gizwifisdk.api.GizWifiSDK;
 import com.gizwits.gizwifisdk.enumration.GizEventType;
+import com.gizwits.gizwifisdk.enumration.GizWifiDeviceNetStatus;
 import com.gizwits.gizwifisdk.enumration.GizWifiErrorCode;
+import com.gizwits.gizwifisdk.listener.GizWifiDeviceListener;
 import com.gizwits.gizwifisdk.listener.GizWifiSDKListener;
 import com.qmuiteam.qmui.widget.QMUITopBar;
+import com.qmuiteam.qmui.widget.dialog.QMUIDialog;
+import com.qmuiteam.qmui.widget.dialog.QMUIDialogAction;
 import com.qmuiteam.qmui.widget.dialog.QMUITipDialog;
+import com.yy.k.gizwitssdk.adapter.LVDevicesAdapter;
 import com.yzq.zxinglibrary.android.CaptureActivity;
 import com.yzq.zxinglibrary.common.Constant;
 
@@ -39,6 +51,17 @@ public class MainActivity extends AppCompatActivity {
 
     private String uid;
     private String token;
+
+    private ListView listView;
+    private LVDevicesAdapter adapter;
+    private List<GizWifiDevice> gizWifiDeviceList;
+    private SwipeRefreshLayout mSwipeRefreshLayout;
+    private View vEmpty;
+
+
+    //刷新的弹窗
+    private QMUITipDialog refleshTipDialog;
+    private QMUITipDialog mTipDialog;
 
     @SuppressLint("HandlerLeak")
     private Handler mHandler = new Handler(){
@@ -83,14 +106,224 @@ public class MainActivity extends AppCompatActivity {
                     }
                 } else {
                     Log.d(TAG, "onCreate: 有权限");
+
                     Intent intent = new Intent(MainActivity.this, CaptureActivity.class);
                     startActivityForResult(intent, REQUEST_CODE_SCAN);
                 }
             }
         });
 
+        gizWifiDeviceList = new ArrayList<>();
+        listView = findViewById(R.id.lv_device);
+        adapter = new LVDevicesAdapter(this, gizWifiDeviceList);
+        listView.setAdapter(adapter);
+        vEmpty = findViewById(R.id.cl_no_device);
+
+        //轻触的点击事件
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                startControl(gizWifiDeviceList.get(position));
+                Log.d(TAG, "onItemClick: 单击");
+            }
+        });
+
+        //长按三秒的点击事件
+        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long l) {
+                showLongDialogOnClick(gizWifiDeviceList.get(position));
+                Log.d(TAG, "onItemLongClick: 长按");
+                return true;
+            }
+        });
+        listView.setEmptyView(vEmpty);
+
         getBoundDevices();
 
+        mSwipeRefreshLayout = findViewById(R.id.swipeRefreshLayout);
+        mSwipeRefreshLayout.setColorSchemeResources(android.R.color.white);
+        mSwipeRefreshLayout.setColorSchemeResources(R.color.app_color_theme_1, R.color.app_color_theme_2
+                , R.color.app_color_theme_3, R.color.app_color_theme_4, R.color.app_color_theme_5
+                , R.color.app_color_theme_6, R.color.app_color_theme_7);
+        //手动调用通知系统测量
+        mSwipeRefreshLayout.measure(0, 0);
+        //打开页面就是下啦的状态
+        mSwipeRefreshLayout.setRefreshing(true);
+
+        //设置手动下啦的监听事件
+        mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                refleshTipDialog = new QMUITipDialog.Builder(MainActivity.this)
+                        .setTipWord("正在刷新...")
+                        .setIconType(QMUITipDialog.Builder.ICON_TYPE_LOADING)
+                        .create();
+                refleshTipDialog.show();
+
+
+                //这里面的是可以在主线程调用的
+                mSwipeRefreshLayout.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        //拿到SDK里面的设备
+                        int deviceNum = GizWifiSDK.sharedInstance().getDeviceList().size();
+                        if (deviceNum != 0) {
+                            Log.d(TAG, "run: getDeviceList().size() = "+deviceNum);
+                            for (int i=0;i<deviceNum;i++){
+                                GizWifiSDK.sharedInstance().getDeviceList().get(i).setListener(mWifiDeviceListener);
+                            }
+
+                            reloadListView();
+
+                        }
+                        refleshTipDialog.dismiss();
+                        mSwipeRefreshLayout.setRefreshing(false);
+
+
+                        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+                        NetworkInfo info = connectivityManager.getActiveNetworkInfo();
+
+                        //获取到了手机已经处于断开网络的状态
+                        if (info == null || !info.isConnected()) {
+                            mTipDialog = new QMUITipDialog.Builder(MainActivity.this)
+                                    .setIconType(QMUITipDialog.Builder.ICON_TYPE_FAIL)
+                                    .setTipWord("获取失败，请检查网络！")
+                                    .create();
+                            mTipDialog.show();
+                            listView.setVisibility(View.GONE);
+
+                        } else {
+
+                            listView.setVisibility(View.VISIBLE);
+                            //显示另外一个弹窗,如果获取到的设备为空
+                            if (gizWifiDeviceList.size() == 0) {
+                                mTipDialog = new QMUITipDialog.Builder(MainActivity.this)
+                                        .setIconType(QMUITipDialog.Builder.ICON_TYPE_NOTHING)
+                                        .setTipWord("暂无设备")
+                                        .create();
+                                mTipDialog.show();
+                            } else {
+                                mTipDialog = new QMUITipDialog.Builder(MainActivity.this)
+                                        .setIconType(QMUITipDialog.Builder.ICON_TYPE_SUCCESS)
+                                        .setTipWord("获取成功")
+                                        .create();
+                                mTipDialog.show();
+                                reloadListView();
+                            }
+
+                        }
+                        mSwipeRefreshLayout.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                mTipDialog.dismiss();
+                            }
+                        }, 1500);
+
+
+                    }
+                }, 3000);
+
+
+            }
+        });
+        //3s之后自动收回来
+        listView.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mSwipeRefreshLayout.setRefreshing(false);
+            }
+        }, 3000);
+
+    }
+
+    private void startControl(GizWifiDevice gizWifiDevice) {
+        if (gizWifiDevice.getNetStatus() == GizWifiDeviceNetStatus.GizDeviceOffline)
+            return;
+
+     //   gizWifiDevice.setListener(mWifiDeviceListener);
+        gizWifiDevice.setSubscribe("b6642a6a5a784c898286d3edf77f99e0", true);
+    }
+
+    private void showLongDialogOnClick(final GizWifiDevice device){
+        //显示弹窗
+        String[] items = new String[]{"重命名", "解绑设备"};
+        new QMUIDialog.MenuDialogBuilder(this).addItems(items, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                switch (i) {
+                    case 0:
+                        showReNameDialog(device);
+                        break;
+                    case 1:
+                        showDelateDialog(device);
+                        break;
+                }
+                dialogInterface.dismiss();
+            }
+
+        }).show();
+    }
+
+
+    //解绑设备
+    private void showDelateDialog(final GizWifiDevice device) {
+
+        new QMUIDialog.MessageDialogBuilder(this)
+                .setTitle("您可解绑远程设备哦！").setMessage("确定要解绑设备？")
+                .addAction("取消", new QMUIDialogAction.ActionListener() {
+                    @Override
+                    public void onClick(QMUIDialog dialog, int index) {
+                        dialog.dismiss();
+                    }
+                })
+                .addAction("删除", new QMUIDialogAction.ActionListener() {
+                    @Override
+                    public void onClick(QMUIDialog dialog, int index) {
+                        GizWifiSDK.sharedInstance().unbindDevice(uid, token, device.getDid());
+                        dialog.dismiss();
+                        reloadListView();
+                    }
+                })
+                .show();
+
+    }
+
+
+    //重命名操作
+    private void showReNameDialog(final GizWifiDevice device) {
+        final QMUIDialog.EditTextDialogBuilder builder = new QMUIDialog.EditTextDialogBuilder(this);
+        builder.setTitle("重命名操作")
+                .setInputType(InputType.TYPE_CLASS_TEXT)
+                .setPlaceholder("在此输入新名字")
+                .addAction("取消", new QMUIDialogAction.ActionListener() {
+                    @Override
+                    public void onClick(QMUIDialog dialog, int index) {
+                        dialog.dismiss();
+                    }
+                })
+                .addAction("确定", new QMUIDialogAction.ActionListener() {
+                    @Override
+                    public void onClick(QMUIDialog dialog, int index) {
+                        String newName = builder.getEditText().getText().toString().trim();
+                        //判断是否输入为空
+                        if (newName.isEmpty()) {
+                            Toast.makeText(MainActivity.this, "修改失败!输入为空！", Toast.LENGTH_SHORT).show();
+                        } else {
+                         //   device.setListener(mWifiDeviceListener);
+                            device.setCustomInfo(null, newName);
+                        }
+                        dialog.dismiss();
+                    }
+                })
+                .show();
+    }
+
+
+    protected void reloadListView() {
+        gizWifiDeviceList.clear();
+        gizWifiDeviceList.addAll(GizWifiSDK.sharedInstance().getDeviceList());
+        adapter.notifyDataSetChanged();
     }
 
     private void getBoundDevices() {
@@ -135,14 +368,16 @@ public class MainActivity extends AppCompatActivity {
                 Log.i(TAG, "SDK event happened: " + eventID + ", " + eventMessage);
             } else if (eventType == GizEventType.GizEventDevice) {
                 // 设备连接断开时可能产生的通知
+
+                Log.d(TAG, "didNotifyEvent: GizWifiSDKNotifyDeviceStatusChanged");
                 GizWifiDevice mDevice = (GizWifiDevice)eventSource;
-                Log.i("krguang", "device mac: " + mDevice.getMacAddress() + " disconnect caused by eventID: " + eventID + ", eventMessage: " + eventMessage);
+                Log.i(TAG, "device mac: " + mDevice.getMacAddress() + " disconnect caused by eventID: " + eventID + ", eventMessage: " + eventMessage);
             } else if (eventType == GizEventType.GizEventM2MService) {
                 // M2M服务返回的异常通知
-                Log.i("krguang", "M2M domain " + (String)eventSource + " exception happened, eventID: " + eventID + ", eventMessage: " + eventMessage);
+                Log.i(TAG, "M2M domain " + (String)eventSource + " exception happened, eventID: " + eventID + ", eventMessage: " + eventMessage);
             } else if (eventType == GizEventType.GizEventToken) {
                 // token失效通知Gizwits 文档 SDK 2.0 参考手册
-                Log.i("krguang", "token " + (String)eventSource + " expired: " + eventMessage);
+                Log.i(TAG, "token " + (String)eventSource + " expired: " + eventMessage);
             }
         }
 
@@ -200,6 +435,48 @@ public class MainActivity extends AppCompatActivity {
         if ((uid!=null)&&(token!=null)&&(QRCode!=null)){
             GizWifiSDK.sharedInstance().bindDeviceByQRCode (uid, token, QRCode,false);
         }
-
     }
+
+    private GizWifiDeviceListener mWifiDeviceListener = new GizWifiDeviceListener() {
+
+
+        @Override
+        public void didSetSubscribe(GizWifiErrorCode result, GizWifiDevice device, boolean isSubscribed) {
+            super.didSetSubscribe(result, device, isSubscribed);
+            Log.d(TAG, "订阅结果：" + result);
+            Log.d(TAG, "订阅设备：" + device);
+
+            //如果为成功的订阅了回调，则可以跳转
+            if (result == GizWifiErrorCode.GIZ_SDK_SUCCESS) {
+              //  Intent intent = new Intent(MainActivity.this, DevivePetAvtivity.class);
+              //  intent.putExtra("_device", device);
+              //  startActivity(intent);
+            }
+        }
+
+        @Override
+        public void didSetCustomInfo(GizWifiErrorCode result, GizWifiDevice device) {
+            super.didSetCustomInfo(result, device);
+            if (result == GizWifiErrorCode.GIZ_SDK_SUCCESS) {
+                // 修改成功
+                if (GizWifiSDK.sharedInstance().getDeviceList().size() != 0) {
+                    gizWifiDeviceList.clear();
+                    gizWifiDeviceList.addAll(GizWifiSDK.sharedInstance().getDeviceList());
+                    adapter.notifyDataSetChanged();
+                    Toast.makeText(MainActivity.this, "修改成功", Toast.LENGTH_SHORT).show();
+                }
+            } else {
+                // 修改失败
+                Toast.makeText(MainActivity.this, "修改失败!", Toast.LENGTH_SHORT).show();
+            }
+        }
+
+        @Override
+        public void didUpdateNetStatus(GizWifiDevice device, GizWifiDeviceNetStatus netStatus) {
+            super.didUpdateNetStatus(device, netStatus);
+
+            Log.d(TAG, "didUpdateNetStatus: 网络状态变化");
+            reloadListView();
+        }
+    };
 }

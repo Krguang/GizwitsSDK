@@ -47,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
     String TAG = "krguang";
     private static final int REQUEST_EXTERNAL_STORAGE = 22;
     private static final int REQUEST_CODE_SCAN = 30;
+    private static final int REQUEST_DEVICE_INIT = 31;
+
     private static String[] PERMISSIONS_STORAGE = {"android.permission.CAMERA","android.permission.READ_EXTERNAL_STORAGE"};
 
     private String uid;
@@ -69,6 +71,12 @@ public class MainActivity extends AppCompatActivity {
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             Log.d(TAG, "handleMessage: "+msg);
+
+            if (msg.what == REQUEST_DEVICE_INIT){
+
+                Log.d(TAG, "run: 我运行起来了");
+                checkDevice();
+            }
         }
     };
 
@@ -141,6 +149,13 @@ public class MainActivity extends AppCompatActivity {
 
         getBoundDevices();
 
+        Message msg = new Message();
+        msg.what = REQUEST_DEVICE_INIT;
+
+        mHandler.sendMessageDelayed(msg,3000);
+        Log.d(TAG, "initView: 延时3秒启动发送");
+
+
         mSwipeRefreshLayout = findViewById(R.id.swipeRefreshLayout);
         mSwipeRefreshLayout.setColorSchemeResources(android.R.color.white);
         mSwipeRefreshLayout.setColorSchemeResources(R.color.app_color_theme_1, R.color.app_color_theme_2
@@ -149,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
         //手动调用通知系统测量
         mSwipeRefreshLayout.measure(0, 0);
         //打开页面就是下啦的状态
-        mSwipeRefreshLayout.setRefreshing(true);
+        mSwipeRefreshLayout.setRefreshing(false);
 
         //设置手动下啦的监听事件
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -166,6 +181,7 @@ public class MainActivity extends AppCompatActivity {
                 mSwipeRefreshLayout.postDelayed(new Runnable() {
                     @Override
                     public void run() {
+
                         //拿到SDK里面的设备
                         int deviceNum = GizWifiSDK.sharedInstance().getDeviceList().size();
                         if (deviceNum != 0) {
@@ -175,7 +191,6 @@ public class MainActivity extends AppCompatActivity {
                             }
 
                             reloadListView();
-
                         }
                         refleshTipDialog.dismiss();
                         mSwipeRefreshLayout.setRefreshing(false);
@@ -213,6 +228,7 @@ public class MainActivity extends AppCompatActivity {
                             }
 
                         }
+
                         mSwipeRefreshLayout.postDelayed(new Runnable() {
                             @Override
                             public void run() {
@@ -223,8 +239,6 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 }, 3000);
-
-
             }
         });
         //3s之后自动收回来
@@ -234,7 +248,21 @@ public class MainActivity extends AppCompatActivity {
                 mSwipeRefreshLayout.setRefreshing(false);
             }
         }, 3000);
+    }
 
+
+    private void checkDevice(){
+
+        //拿到SDK里面的设备
+        int deviceNum = GizWifiSDK.sharedInstance().getDeviceList().size();
+        if (deviceNum != 0) {
+            Log.d(TAG, "run: getDeviceList().size() = "+deviceNum);
+            for (int i=0;i<deviceNum;i++){
+                GizWifiSDK.sharedInstance().getDeviceList().get(i).setListener(mWifiDeviceListener);
+            }
+
+            reloadListView();
+        }
     }
 
     private void startControl(GizWifiDevice gizWifiDevice) {

@@ -1,6 +1,7 @@
 package com.yy.k.gizwitssdk;
 
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_EXTERNAL_STORAGE = 22;
     private static final int REQUEST_CODE_SCAN = 30;
     private static final int REQUEST_DEVICE_INIT = 31;
+    private static final int REQUEST_DEVICE_DELETE = 32;
 
     private static String[] PERMISSIONS_STORAGE = {"android.permission.CAMERA","android.permission.READ_EXTERNAL_STORAGE"};
 
@@ -63,6 +65,10 @@ public class MainActivity extends AppCompatActivity {
     private QMUITipDialog refleshTipDialog;
     private QMUITipDialog mTipDialog;
 
+    //解绑进度弹窗
+    private ProgressDialog dialogDelate;
+    Message msg;
+
     @SuppressLint("HandlerLeak")
     private Handler mHandler = new Handler(){
         @Override
@@ -74,6 +80,11 @@ public class MainActivity extends AppCompatActivity {
 
                 Log.d(TAG, "run: 我运行起来了");
                 checkDevice();
+            }
+
+            if (msg.what == REQUEST_DEVICE_DELETE){
+                dialogDelate.dismiss();
+                reloadListView();
             }
         }
     };
@@ -147,9 +158,9 @@ public class MainActivity extends AppCompatActivity {
 
         getBoundDevices();
 
-        Message msg = new Message();
-        msg.what = REQUEST_DEVICE_INIT;
 
+        msg = new Message();
+        msg.what = REQUEST_DEVICE_INIT;
         mHandler.sendMessageDelayed(msg,3000);
         Log.d(TAG, "initView: 延时3秒启动发送");
 
@@ -232,8 +243,6 @@ public class MainActivity extends AppCompatActivity {
                                 mTipDialog.dismiss();
                             }
                         }, 1500);
-
-
                     }
                 }, 3000);
             }
@@ -307,10 +316,23 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(QMUIDialog dialog, int index) {
                         GizWifiSDK.sharedInstance().unbindDevice(uid, token, device.getDid());
                         dialog.dismiss();
+                     //   reloadListView();
 
 
+//                        dialogDelate = new ProgressDialog(MainActivity.this);
+//                        dialogDelate.setMessage("正在配网中...");
+//                        dialogDelate.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+//                        dialogDelate.setCancelable(false);//屏幕外不可点击
 
-                      //  reloadListView();
+                        dialogDelate = new ProgressDialog(MainActivity.this);
+                        dialogDelate.setMessage("处理中，请稍等...");
+                        dialogDelate.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                        dialogDelate.setCancelable(false);//屏幕外不可点击
+                        dialogDelate.show();
+
+                        msg = new Message();
+                        msg.what = REQUEST_DEVICE_DELETE;
+                        mHandler.sendMessageDelayed(msg,1000);
                     }
                 })
                 .show();

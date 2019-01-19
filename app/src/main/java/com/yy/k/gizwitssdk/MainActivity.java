@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -50,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_CODE_SCAN = 30;
     private static final int REQUEST_DEVICE_INIT = 31;
     private static final int REQUEST_DEVICE_DELETE = 32;
+    private static final int REQUEST_DEVICE_BIND = 33;
+
 
     private static String[] PERMISSIONS_STORAGE = {"android.permission.CAMERA","android.permission.READ_EXTERNAL_STORAGE"};
 
@@ -83,7 +86,13 @@ public class MainActivity extends AppCompatActivity {
             }
 
             if (msg.what == REQUEST_DEVICE_DELETE){
-                dialogDelate.dismiss();
+                if (dialogDelate != null){
+                    dialogDelate.dismiss();
+                }
+                reloadListView();
+            }
+
+            if (msg.what == REQUEST_DEVICE_BIND){
                 reloadListView();
             }
         }
@@ -93,6 +102,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Toast.makeText(this,"hehe",Toast.LENGTH_LONG).show();
         initSDK();
         initView();
     }
@@ -103,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
         //保证了每次打开页面能正常的回调SDK监听
         GizWifiSDK.sharedInstance().setListener(mListener);
     }
+
 
     private void initView() {
         QMUITopBar topBar = findViewById(R.id.topBar);
@@ -204,7 +216,6 @@ public class MainActivity extends AppCompatActivity {
                         refleshTipDialog.dismiss();
                         mSwipeRefreshLayout.setRefreshing(false);
 
-
                         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
                         NetworkInfo info = connectivityManager.getActiveNetworkInfo();
 
@@ -304,25 +315,18 @@ public class MainActivity extends AppCompatActivity {
     private void showDelateDialog(final GizWifiDevice device) {
 
         new QMUIDialog.MessageDialogBuilder(this)
-                .setTitle("您可解绑远程设备哦！").setMessage("确定要解绑设备？")
+                .setTitle("确定要解绑设备？")
                 .addAction("取消", new QMUIDialogAction.ActionListener() {
                     @Override
                     public void onClick(QMUIDialog dialog, int index) {
                         dialog.dismiss();
                     }
                 })
-                .addAction("删除", new QMUIDialogAction.ActionListener() {
+                .addAction("解绑", new QMUIDialogAction.ActionListener() {
                     @Override
                     public void onClick(QMUIDialog dialog, int index) {
                         GizWifiSDK.sharedInstance().unbindDevice(uid, token, device.getDid());
                         dialog.dismiss();
-                     //   reloadListView();
-
-
-//                        dialogDelate = new ProgressDialog(MainActivity.this);
-//                        dialogDelate.setMessage("正在配网中...");
-//                        dialogDelate.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-//                        dialogDelate.setCancelable(false);//屏幕外不可点击
 
                         dialogDelate = new ProgressDialog(MainActivity.this);
                         dialogDelate.setMessage("处理中，请稍等...");
@@ -336,7 +340,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 })
                 .show();
-
     }
 
 
@@ -404,6 +407,8 @@ public class MainActivity extends AppCompatActivity {
         // 调用 SDK 的启动接口
         GizWifiSDK.sharedInstance().startWithAppInfo(this, appInfo, productInfo, null, false);
         // 实现系统事件通知回调
+
+
     }
 
     private GizWifiSDKListener mListener = new GizWifiSDKListener() {
@@ -484,6 +489,9 @@ public class MainActivity extends AppCompatActivity {
 
         if ((uid!=null)&&(token!=null)&&(QRCode!=null)){
             GizWifiSDK.sharedInstance().bindDeviceByQRCode (uid, token, QRCode,false);
+            msg = new Message();
+            msg.what = REQUEST_DEVICE_BIND;
+            mHandler.sendMessageDelayed(msg,1000);
         }
     }
 
@@ -506,18 +514,17 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void didSetCustomInfo(GizWifiErrorCode result, GizWifiDevice device) {
+
             super.didSetCustomInfo(result, device);
             if (result == GizWifiErrorCode.GIZ_SDK_SUCCESS) {
                 // 修改成功
                 if (GizWifiSDK.sharedInstance().getDeviceList().size() != 0) {
-                    gizWifiDeviceList.clear();
-                    gizWifiDeviceList.addAll(GizWifiSDK.sharedInstance().getDeviceList());
-                    adapter.notifyDataSetChanged();
-                    Toast.makeText(MainActivity.this, "修改成功", Toast.LENGTH_SHORT).show();
+                    reloadListView();
+                    Toast.makeText(MainActivity.this, device.getAlias()+":修改成功", Toast.LENGTH_SHORT).show();
                 }
             } else {
                 // 修改失败
-                Toast.makeText(MainActivity.this, "修改失败!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, device.getAlias()+":修改失败", Toast.LENGTH_SHORT).show();
             }
         }
 

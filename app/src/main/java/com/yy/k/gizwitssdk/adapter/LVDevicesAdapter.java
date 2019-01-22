@@ -102,7 +102,6 @@ public class LVDevicesAdapter extends BaseAdapter {
             viewHodlerListView.mIvDeviceIcon.setBackgroundResource(R.drawable.ic_device);
         }
 
-
         return view1;
     }
 

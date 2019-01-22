@@ -5,7 +5,6 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -34,6 +33,7 @@ import com.qmuiteam.qmui.widget.QMUITopBar;
 import com.qmuiteam.qmui.widget.dialog.QMUIDialog;
 import com.qmuiteam.qmui.widget.dialog.QMUIDialogAction;
 import com.qmuiteam.qmui.widget.dialog.QMUITipDialog;
+import com.yy.k.gizwitssdk.DevicesControlActivity.UnitAvtivity;
 import com.yy.k.gizwitssdk.adapter.LVDevicesAdapter;
 import com.yzq.zxinglibrary.android.CaptureActivity;
 import com.yzq.zxinglibrary.common.Constant;
@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_DEVICE_INIT = 31;
     private static final int REQUEST_DEVICE_DELETE = 32;
     private static final int REQUEST_DEVICE_BIND = 33;
-
 
     private static String[] PERMISSIONS_STORAGE = {"android.permission.CAMERA","android.permission.READ_EXTERNAL_STORAGE"};
 
@@ -103,7 +102,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toast.makeText(this,"hehe",Toast.LENGTH_LONG).show();
         initSDK();
         initView();
     }
@@ -169,7 +167,6 @@ public class MainActivity extends AppCompatActivity {
         listView.setEmptyView(vEmpty);
 
         getBoundDevices();
-
 
         msg = new Message();
         msg.what = REQUEST_DEVICE_INIT;
@@ -288,6 +285,10 @@ public class MainActivity extends AppCompatActivity {
 
      //   gizWifiDevice.setListener(mWifiDeviceListener);
         gizWifiDevice.setSubscribe("b6642a6a5a784c898286d3edf77f99e0", true);
+
+          Intent intent = new Intent(MainActivity.this, UnitAvtivity.class);
+          intent.putExtra("gizWifiDevice", gizWifiDevice);
+          startActivity(intent);
     }
 
     private void showLongDialogOnClick(final GizWifiDevice device){
@@ -336,7 +337,7 @@ public class MainActivity extends AppCompatActivity {
 
                         msg = new Message();
                         msg.what = REQUEST_DEVICE_DELETE;
-                        mHandler.sendMessageDelayed(msg,1000);
+                        mHandler.sendMessageDelayed(msg,2000);
                     }
                 })
                 .show();
@@ -491,7 +492,7 @@ public class MainActivity extends AppCompatActivity {
             GizWifiSDK.sharedInstance().bindDeviceByQRCode (uid, token, QRCode,false);
             msg = new Message();
             msg.what = REQUEST_DEVICE_BIND;
-            mHandler.sendMessageDelayed(msg,1000);
+            mHandler.sendMessageDelayed(msg,2000);
         }
     }
 

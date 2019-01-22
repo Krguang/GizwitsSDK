@@ -31,8 +31,7 @@
             android:layout_height="wrap_content"
             android:maxLines="1"
             android:text="测试设备"
-            android:textColor="@android:color/black"
-            android:textSize="15sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/tvDeviceIMEI"
@@ -41,6 +40,7 @@
             android:maxLines="1"
             android:text="00000000000000"
             android:textColor="@color/tab_panel_divider"
+            android:textSize="10sp"
             />
 
     </LinearLayout>

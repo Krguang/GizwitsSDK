@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:id="@+id/ll_unit"
+    >
+
+        <TextView
+            android:id="@+id/tv_unitName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff999999"
+            android:gravity="center"
+            android:text="Unit1"
+            android:textColor="#ff000000"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/frame_shape"
+                android:gravity="center"
+                android:text="当前温度:"
+                android:textColor="#ff000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_currentTemperature"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/frame_shape"
+                android:gravity="center"
+                android:text="00.0 ℃"
+                android:textColor="#ff000000"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/frame_shape"
+                android:gravity="center"
+                android:text="当前湿度:"
+                android:textColor="#ff000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_currentHumidity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/frame_shape"
+                android:gravity="center"
+                android:text="00.0 RH"
+                android:textColor="#ff000000"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/frame_shape"
+                android:gravity="center"
+                android:text="温度设定:"
+                android:textColor="#ff000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_settingTemperature"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/frame_shape"
+                android:gravity="center"
+                android:text="00.0 ℃"
+                android:textColor="#ff000000"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/frame_shape"
+                android:gravity="center"
+                android:text="湿度设定:"
+                android:textColor="#ff000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_settingHumidity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/frame_shape"
+                android:gravity="center"
+                android:text="00.0 RH"
+                android:textColor="#ff000000"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+</LinearLayout>

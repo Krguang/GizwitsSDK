@@ -2,7 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="150dp"
-    android:padding="20dp">
+    android:padding="20dp"
+    android:background="@color/s_btn_blue_text"
+    >
 
 
     <ImageView
@@ -14,17 +16,36 @@
         android:background="@drawable/ic_device" />
 
 
-    <TextView
-        android:id="@+id/tvDeviceName"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_centerInParent="true"
         android:layout_marginStart="25dp"
         android:layout_toRightOf="@+id/ivDeviceIcon"
-        android:maxLines="1"
-        android:text="测试设备"
-        android:textColor="@android:color/black"
-        android:textSize="15sp" />
+        >
+
+        <TextView
+            android:id="@+id/tvDeviceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="测试设备"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvDeviceIMEI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="00000000000000"
+            android:textColor="@color/tab_panel_divider"
+            />
+
+    </LinearLayout>
+
+
 
     <TextView
         android:textSize="12sp"

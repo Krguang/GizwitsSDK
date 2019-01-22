@@ -68,6 +68,7 @@ public class LVDevicesAdapter extends BaseAdapter {
             viewHodlerListView.mTVStatus = view1.findViewById(R.id.tvStatus);
             viewHodlerListView.mIvDeviceIcon = view1.findViewById(R.id.ivDeviceIcon);
             viewHodlerListView.mIvNext = view1.findViewById(R.id.ivNext);
+            viewHodlerListView.mTvIMEI = view1.findViewById(R.id.tvDeviceIMEI);
 
             view1.setTag(viewHodlerListView);
         } else {
@@ -83,8 +84,7 @@ public class LVDevicesAdapter extends BaseAdapter {
             viewHodlerListView.mTvName.setText(device.getAlias());
         }
 
-
-        Log.d(TAG, "getView: ");
+        viewHodlerListView.mTvIMEI.setText(device.getMacAddress());
 
         //设置下状态
         if (device.getNetStatus() == GizWifiDeviceNetStatus.GizDeviceOffline) {
@@ -112,7 +112,7 @@ public class LVDevicesAdapter extends BaseAdapter {
         ImageView mIvDeviceIcon, mIvNext;
 
         //设备名字和设备状态
-        TextView mTvName, mTVStatus;
+        TextView mTvName, mTVStatus,mTvIMEI;
 
     }
 

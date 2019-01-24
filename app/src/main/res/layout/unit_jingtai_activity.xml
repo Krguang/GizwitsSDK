@@ -12,4 +12,8 @@
         app:qmui_topbar_bg_color="@color/app_color_blue"
         app:qmui_topbar_need_separator="true" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="景泰"/>
 </LinearLayout>

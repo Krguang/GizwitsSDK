@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.yy.k.gizwitssdk">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -22,7 +23,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:screenOrientation="portrait"
-        android:theme="@style/fullAppTheme">
+        android:theme="@style/fullAppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="portrait"
@@ -35,8 +37,9 @@
         <activity android:name=".MainActivity"
             android:screenOrientation="portrait"
             />
-        <activity android:name=".DevicesControlActivity.UnitAvtivity"
+        <activity android:name=".DevicesControlActivity.UnitJingTaiActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".DevicesControlActivity.UnitDaLianActivity" />
     </application>
 
 </manifest>

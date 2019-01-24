@@ -33,7 +33,8 @@ import com.qmuiteam.qmui.widget.QMUITopBar;
 import com.qmuiteam.qmui.widget.dialog.QMUIDialog;
 import com.qmuiteam.qmui.widget.dialog.QMUIDialogAction;
 import com.qmuiteam.qmui.widget.dialog.QMUITipDialog;
-import com.yy.k.gizwitssdk.DevicesControlActivity.UnitAvtivity;
+import com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity;
+import com.yy.k.gizwitssdk.DevicesControlActivity.UnitJingTaiActivity;
 import com.yy.k.gizwitssdk.adapter.LVDevicesAdapter;
 import com.yzq.zxinglibrary.android.CaptureActivity;
 import com.yzq.zxinglibrary.common.Constant;
@@ -42,6 +43,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
+import utils.ConstantUtil;
 import utils.SpUtils;
 
 public class MainActivity extends AppCompatActivity {
@@ -283,12 +285,20 @@ public class MainActivity extends AppCompatActivity {
         if (gizWifiDevice.getNetStatus() == GizWifiDeviceNetStatus.GizDeviceOffline)
             return;
 
-     //   gizWifiDevice.setListener(mWifiDeviceListener);
-        gizWifiDevice.setSubscribe("b6642a6a5a784c898286d3edf77f99e0", true);
+        switch (gizWifiDevice.getProductKey()){
+            case ConstantUtil.JINGTAI_PRODUCT_KEY:
+                gizWifiDevice.setSubscribe(ConstantUtil.JINGTAI_PRODUCT_SECRET,true);
+                Intent intent1 = new Intent(MainActivity.this, UnitJingTaiActivity.class);
+                intent1.putExtra("gizWifiDevice", gizWifiDevice);
+                startActivity(intent1);
+                break;
+            case ConstantUtil.DALIANYOUYI_PRODUCT_KEY:
+                gizWifiDevice.setSubscribe(ConstantUtil.DALIANYOUYI_PRODUCT_SECRET,true);
+                Intent intent2 = new Intent(MainActivity.this, UnitDaLianActivity.class);
+                intent2.putExtra("gizWifiDevice", gizWifiDevice);
+                startActivity(intent2);
 
-          Intent intent = new Intent(MainActivity.this, UnitAvtivity.class);
-          intent.putExtra("gizWifiDevice", gizWifiDevice);
-          startActivity(intent);
+        }
     }
 
     private void showLongDialogOnClick(final GizWifiDevice device){
@@ -394,27 +404,27 @@ public class MainActivity extends AppCompatActivity {
 
         // 设置 SDK 监听
         GizWifiSDK.sharedInstance().setListener(mListener);
-        // 设置 AppInfo
+        //此处初始化sdk
         ConcurrentHashMap<String, String> appInfo = new ConcurrentHashMap<>();
-        appInfo.put("appId", "a4a97959861746bfb18a9cc4f73606c9");
-        appInfo.put("appSecret", "431f6a51521c439fab805758b3be7b00");
-        // 设置要过滤的设备 productKey 列表。 不过滤则直接传 null
+        appInfo.put("appId", ConstantUtil.APP_ID);
+        appInfo.put("appSecret", ConstantUtil.APP_SECRET);
+
         List<ConcurrentHashMap<String, String>> productInfo = new ArrayList<>();
-        ConcurrentHashMap<String, String> product = new ConcurrentHashMap<>();
-        product.put("productKey", "36ea0d1c0e38492fa6d1f30cff732daa");
-        product.put("productSecret", "a79d12e2430b4f6491a7e40ecfd32586");
-        productInfo.add(product);
 
-        // 调用 SDK 的启动接口
+        ConcurrentHashMap<String, String> product1 = new ConcurrentHashMap<>();
+        product1.put("productKey", ConstantUtil.JINGTAI_PRODUCT_KEY);
+        product1.put("productSecret", ConstantUtil.JINGTAI_PRODUCT_SECRET);
+        productInfo.add(product1);
+
+        ConcurrentHashMap<String, String> product2 = new ConcurrentHashMap<>();
+        product2.put("productKey", ConstantUtil.DALIANYOUYI_PRODUCT_KEY);
+        product2.put("productSecret", ConstantUtil.DALIANYOUYI_PRODUCT_SECRET);
+        productInfo.add(product2);
+
         GizWifiSDK.sharedInstance().startWithAppInfo(this, appInfo, productInfo, null, false);
-        // 实现系统事件通知回调
-
-
     }
 
     private GizWifiSDKListener mListener = new GizWifiSDKListener() {
-
-
 
         @Override
         public void didNotifyEvent(GizEventType eventType, Object eventSource,

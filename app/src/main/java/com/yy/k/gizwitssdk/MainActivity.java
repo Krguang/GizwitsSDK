@@ -526,6 +526,9 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void didSetCustomInfo(GizWifiErrorCode result, GizWifiDevice device) {
 
+
+            Log.d(TAG, "didSetCustomInfo: 修改了设备名");
+            
             super.didSetCustomInfo(result, device);
             if (result == GizWifiErrorCode.GIZ_SDK_SUCCESS) {
                 // 修改成功

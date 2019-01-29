@@ -12,10 +12,1582 @@
         app:qmui_topbar_bg_color="@color/app_color_blue"
         app:qmui_topbar_need_separator="true" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color"
+        android:fadingEdge="vertical"
+        android:paddingTop="10dp"
+        android:scrollbars="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="大连"
-        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:scrollbars="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/ll_ahu301"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_main_state_title_ahu301"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ff999999"
+                    android:gravity="center"
+                    android:text="AHU301"
+                    android:textColor="#ff000000"
+                    android:textSize="30sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="当前温度:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_tempnow_ahu301"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="当前湿度:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_huminow_ahu301"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 RH"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="温度设定:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_tempset_ahu301"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="湿度设定:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_humiset_ahu301"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 RH"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_ahu302"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_main_state_title_ahu302"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ff999999"
+                    android:gravity="center"
+                    android:text="AHU302"
+                    android:textColor="#ff000000"
+                    android:textSize="30sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="当前温度:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_tempnow_ahu302"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="当前湿度:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_huminow_ahu302"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 RH"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="温度设定:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_tempset_ahu302"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="湿度设定:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_humiset_ahu302"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 RH"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_ahu303"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_main_state_title_ahu303"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ff999999"
+                    android:gravity="center"
+                    android:text="AHU303"
+                    android:textColor="#ff000000"
+                    android:textSize="30sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="当前温度:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_tempnow_ahu303"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="当前湿度:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_huminow_ahu303"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 RH"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="温度设定:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_tempset_ahu303"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="湿度设定:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_humiset_ahu303"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 RH"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_ahu304"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_main_state_title_ahu304"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ff999999"
+                    android:gravity="center"
+                    android:text="AHU304"
+                    android:textColor="#ff000000"
+                    android:textSize="30sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="当前温度:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_tempnow_ahu304"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="当前湿度:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_huminow_ahu304"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 RH"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="温度设定:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_tempset_ahu304"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="湿度设定:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_humiset_ahu304"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 RH"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_ahu305"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_main_state_title_ahu305"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ff999999"
+                    android:gravity="center"
+                    android:text="AHU305"
+                    android:textColor="#ff000000"
+                    android:textSize="30sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="当前温度:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_tempnow_ahu305"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="当前湿度:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_huminow_ahu305"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 RH"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="温度设定:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_tempset_ahu305"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="湿度设定:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_humiset_ahu305"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 RH"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_ahu306"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_main_state_title_ahu306"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ff999999"
+                    android:gravity="center"
+                    android:text="AHU306"
+                    android:textColor="#ff000000"
+                    android:textSize="30sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="当前温度:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_tempnow_ahu306"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="当前湿度:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_huminow_ahu306"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 RH"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="温度设定:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_tempset_ahu306"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="湿度设定:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_humiset_ahu306"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 RH"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_ahu307"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_main_state_title_ahu307"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ff999999"
+                    android:gravity="center"
+                    android:text="AHU307"
+                    android:textColor="#ff000000"
+                    android:textSize="30sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="当前温度:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_tempnow_ahu307"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="当前湿度:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_huminow_ahu307"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 RH"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="温度设定:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_tempset_ahu307"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="湿度设定:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_humiset_ahu307"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 RH"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_ahu308"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_main_state_title_ahu308"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ff999999"
+                    android:gravity="center"
+                    android:text="AHU308"
+                    android:textColor="#ff000000"
+                    android:textSize="30sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="当前温度:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_tempnow_ahu308"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="当前湿度:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_huminow_ahu308"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 RH"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="温度设定:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_tempset_ahu308"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="湿度设定:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_humiset_ahu308"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 RH"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_pau301"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_main_state_title_pau301"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ff999999"
+                    android:gravity="center"
+                    android:text="PAU301"
+                    android:textColor="#ff000000"
+                    android:textSize="30sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="新风温度:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_temp_new_wind_pau301"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="送风温度:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_tempnow_pau301"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="温度设定:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_tempset_pau301"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_pau302"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_main_state_title_pau302"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ff999999"
+                    android:gravity="center"
+                    android:text="PAU302"
+                    android:textColor="#ff000000"
+                    android:textSize="30sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="新风温度:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_temp_new_wind_pau302"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="送风温度:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_tempnow_pau302"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="温度设定:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_tempset_pau302"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_pau303"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_main_state_title_pau303"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ff999999"
+                    android:gravity="center"
+                    android:text="PAU303"
+                    android:textColor="#ff000000"
+                    android:textSize="30sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="新风温度:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_temp_new_wind_pau303"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="送风温度:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_tempnow_pau303"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="温度设定:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_tempset_pau303"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_pau304"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_main_state_title_pau304"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ff999999"
+                    android:gravity="center"
+                    android:text="PAU304"
+                    android:textColor="#ff000000"
+                    android:textSize="30sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="新风温度:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_temp_new_wind_pau304"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="送风温度:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_tempnow_pau304"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="温度设定:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_tempset_pau304"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_pau305"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_main_state_title_pau305"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ff999999"
+                    android:gravity="center"
+                    android:text="PAU305"
+                    android:textColor="#ff000000"
+                    android:textSize="30sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="新风温度:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_temp_new_wind_pau305"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="送风温度:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_tempnow_pau305"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="温度设定:"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_main_state_tempset_pau305"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/frame_shape"
+                        android:gravity="center"
+                        android:text="00.0 ℃"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

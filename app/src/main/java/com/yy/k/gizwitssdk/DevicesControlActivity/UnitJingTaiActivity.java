@@ -655,11 +655,221 @@ public class UnitJingTaiActivity extends BaseDevicesControlActivity implements V
             ConcurrentHashMap<String, Object> map = (ConcurrentHashMap<String, Object>) dataMap.get("data");
             for (String dataKey : map.keySet()) {
 
+                if (dataKey.equals(KEY_JK_1_FENGJIYIQIDONG)) {
+                    data_JK_1_fengJiYiQiDong = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_1_ZHIBANSTATUS)) {
+                    data_JK_1_zhiBanStatus = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_1_DIANJIARE1)) {
+                    data_JK_1_dianJiaRe1 = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_1_DIANJIARE2)) {
+                    data_JK_1_dianJiaRe2 = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_1_DIANJIARE3)) {
+                    data_JK_1_dianJiaRe3 = (Boolean) map.get(dataKey);
+                }
                 if (dataKey.equals(KEY_JK_1_FENGJISTATUS)) {
                     data_JK_1_fengJiStatus = (Boolean) map.get(dataKey);
                 }
+                if (dataKey.equals(KEY_JK_1_SHOUZIDONG)) {
+                    data_JK_1_shouZiDong = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_1_DONGXIAJI)) {
+                    data_JK_1_dongXiaJi = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_1_ZHONGXIAOBAOJING)) {
+                    data_JK_1_zhongXiaoBaoJing = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_1_DIANJIAREGAOWEN)) {
+                    data_JK_1_dianJiaReGaoWen = (Boolean) map.get(dataKey);
+                }
                 if (dataKey.equals(KEY_JK_1_FENGJIQUEFENG)) {
                     data_JK_1_fengJiQueFeng = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_1_PAIFENGJIYIQIDONG)) {
+                    data_JK_1_paiFengJiYiQiDong = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_1_DIWENPANGUAN)) {
+                    data_JK_1_diWenPanGuan = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_1_MIEJUNYUNXING)) {
+                    data_JK_1_mieJunYunXing = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_2_FENGJIYIQIDONG)) {
+                    data_JK_2_fengJiYiQiDong = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_2_ZHIBANSTATUS)) {
+                    data_JK_2_zhiBanStatus = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_2_DIANJIARE1)) {
+                    data_JK_2_dianJiaRe1 = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_2_DIANJIARE2)) {
+                    data_JK_2_dianJiaRe2 = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_2_DIANJIARE3)) {
+                    data_JK_2_dianJiaRe3 = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_2_FENGJISTATUS)) {
+                    data_JK_2_fengJiStatus = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_2_SHOUZIDONG)) {
+                    data_JK_2_shouZiDong = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_2_DONGXIAJI)) {
+                    data_JK_2_dongXiaJi = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_2_ZHONGXIAOBAOJING)) {
+                    data_JK_2_zhongXiaoBaoJing = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_2_DIANJIAREGAOWEN)) {
+                    data_JK_2_dianJiaReGaoWen = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_2_FENGJIQUEFENG)) {
+                    data_JK_2_fengJiQueFeng = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_2_PAIFENGJIYIQIDONG)) {
+                    data_JK_2_paiFengJiYiQiDong = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_2_DIWENPANGUAN)) {
+                    data_JK_2_diWenPanGuan = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_2_MIEJUNYUNXING)) {
+                    data_JK_2_mieJunYunXing = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_3_FENGJIYIQIDONG)) {
+                    data_JK_3_fengJiYiQiDong = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_3_ZHIBANSTATUS)) {
+                    data_JK_3_zhiBanStatus = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_3_DIANJIARE1)) {
+                    data_JK_3_dianJiaRe1 = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_3_DIANJIARE2)) {
+                    data_JK_3_dianJiaRe2 = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_3_DIANJIARE3)) {
+                    data_JK_3_dianJiaRe3 = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_3_FENGJISTATUS)) {
+                    data_JK_3_fengJiStatus = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_3_SHOUZIDONG)) {
+                    data_JK_3_shouZiDong = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_3_DONGXIAJI)) {
+                    data_JK_3_dongXiaJi = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_3_ZHONGXIAOBAOJING)) {
+                    data_JK_3_zhongXiaoBaoJing = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_3_DIANJIAREGAOWEN)) {
+                    data_JK_3_dianJiaReGaoWen = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_3_FENGJIQUEFENG)) {
+                    data_JK_3_fengJiQueFeng = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_3_PAIFENGJIYIQIDONG)) {
+                    data_JK_3_paiFengJiYiQiDong = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_3_DIWENPANGUAN)) {
+                    data_JK_3_diWenPanGuan = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_3_MIEJUNYUNXING)) {
+                    data_JK_3_mieJunYunXing = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_XF_FENGJIYIQIDONG)) {
+                    data_JK_XF_fengJiYiQiDong = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_XF_ZHIBANSTATUS)) {
+                    data_JK_XF_zhiBanStatus = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_XF_DIANJIARE1)) {
+                    data_JK_XF_dianJiaRe1 = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_XF_DIANJIARE2)) {
+                    data_JK_XF_dianJiaRe2 = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_XF_DIANJIARE3)) {
+                    data_JK_XF_dianJiaRe3 = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_XF_FENGJISTATUS)) {
+                    data_JK_XF_fengJiStatus = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_XF_SHOUZIDONG)) {
+                    data_JK_XF_shouZiDong = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_XF_DONGXIAJI)) {
+                    data_JK_XF_dongXiaJi = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_XF_ZHONGXIAOBAOJING)) {
+                    data_JK_XF_zhongXiaoBaoJing = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_XF_DIANJIAREGAOWEN)) {
+                    data_JK_XF_dianJiaReGaoWen = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_XF_FENGJIQUEFENG)) {
+                    data_JK_XF_fengJiQueFeng = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_XF_PAIFENGJIYIQIDONG)) {
+                    data_JK_XF_paiFengJiYiQiDong = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_XF_DIWENPANGUAN)) {
+                    data_JK_XF_diWenPanGuan = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_XF_MIEJUNYUNXING)) {
+                    data_JK_XF_mieJunYunXing = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_1_MIANBANTONGXUNZHUANGTAI1)) {
+
+                    data_JK_1_mianBanTongXunZhuangTai1 = (Integer) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_1_MIANBANTONGXUNZHUANGTAI2)) {
+
+                    data_JK_1_mianBanTongXunZhuangTai2 = (Integer) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_1_MIANBANTONGXUNZHUANGTAI3)) {
+
+                    data_JK_1_mianBanTongXunZhuangTai3 = (Integer) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_2_MIANBANTONGXUNZHUANGTAI1)) {
+
+                    data_JK_2_mianBanTongXunZhuangTai1 = (Integer) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_2_MIANBANTONGXUNZHUANGTAI2)) {
+
+                    data_JK_2_mianBanTongXunZhuangTai2 = (Integer) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_2_MIANBANTONGXUNZHUANGTAI3)) {
+
+                    data_JK_2_mianBanTongXunZhuangTai3 = (Integer) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_3_MIANBANTONGXUNZHUANGTAI1)) {
+
+                    data_JK_3_mianBanTongXunZhuangTai1 = (Integer) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_3_MIANBANTONGXUNZHUANGTAI2)) {
+
+                    data_JK_3_mianBanTongXunZhuangTai2 = (Integer) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_3_MIANBANTONGXUNZHUANGTAI3)) {
+
+                    data_JK_3_mianBanTongXunZhuangTai3 = (Integer) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_XF_MIANBANTONGXUNZHUANGTAI1)) {
+
+                    data_JK_XF_mianBanTongXunZhuangTai1 = (Integer) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_XF_MIANBANTONGXUNZHUANGTAI2)) {
+
+                    data_JK_XF_mianBanTongXunZhuangTai2 = (Integer) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_XF_MIANBANTONGXUNZHUANGTAI3)) {
+
+                    data_JK_XF_mianBanTongXunZhuangTai3 = (Integer) map.get(dataKey);
                 }
                 if (dataKey.equals(KEY_JK_1_TEMPREAL)) {
 
@@ -677,12 +887,25 @@ public class UnitJingTaiActivity extends BaseDevicesControlActivity implements V
 
                     data_JK_1_humiSet = (Integer) map.get(dataKey);
                 }
+                if (dataKey.equals(KEY_JK_1_LENGSHUIFAKAIDU)) {
 
-                if (dataKey.equals(KEY_JK_2_FENGJISTATUS)) {
-                    data_JK_2_fengJiStatus = (Boolean) map.get(dataKey);
+                    data_JK_1_lengShuiFaKaiDu = (Integer) map.get(dataKey);
                 }
-                if (dataKey.equals(KEY_JK_2_FENGJIQUEFENG)) {
-                    data_JK_2_fengJiQueFeng = (Boolean) map.get(dataKey);
+                if (dataKey.equals(KEY_JK_1_RESHUIFAKAIDU)) {
+
+                    data_JK_1_reShuiFaKaiDu = (Integer) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_1_XINFENGWENDU)) {
+
+                    data_JK_1_xinFengWenDU = (Integer) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_1_JIASHIQIKAIDU)) {
+
+                    data_JK_1_jiaShiQIKaiDu = (Integer) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_1_BEIYONG)) {
+
+                    data_JK_1_beiYong = (Integer) map.get(dataKey);
                 }
                 if (dataKey.equals(KEY_JK_2_TEMPREAL)) {
 
@@ -700,13 +923,25 @@ public class UnitJingTaiActivity extends BaseDevicesControlActivity implements V
 
                     data_JK_2_humiSet = (Integer) map.get(dataKey);
                 }
+                if (dataKey.equals(KEY_JK_2_LENGSHUIFAKAIDU)) {
 
-
-                if (dataKey.equals(KEY_JK_3_FENGJISTATUS)) {
-                    data_JK_3_fengJiStatus = (Boolean) map.get(dataKey);
+                    data_JK_2_lengShuiFaKaiDu = (Integer) map.get(dataKey);
                 }
-                if (dataKey.equals(KEY_JK_3_FENGJIQUEFENG)) {
-                    data_JK_3_fengJiQueFeng = (Boolean) map.get(dataKey);
+                if (dataKey.equals(KEY_JK_2_RESHUIFAKAIDU)) {
+
+                    data_JK_2_reShuiFaKaiDu = (Integer) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_2_XINFENGWENDU)) {
+
+                    data_JK_2_xinFengWenDU = (Integer) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_2_JIASHIQIKAIDU)) {
+
+                    data_JK_2_jiaShiQIKaiDu = (Integer) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_2_BEIYONG)) {
+
+                    data_JK_2_beiYong = (Integer) map.get(dataKey);
                 }
                 if (dataKey.equals(KEY_JK_3_TEMPREAL)) {
 
@@ -724,13 +959,25 @@ public class UnitJingTaiActivity extends BaseDevicesControlActivity implements V
 
                     data_JK_3_humiSet = (Integer) map.get(dataKey);
                 }
+                if (dataKey.equals(KEY_JK_3_LENGSHUIFAKAIDU)) {
 
-
-                if (dataKey.equals(KEY_JK_XF_FENGJISTATUS)) {
-                    data_JK_XF_fengJiStatus = (Boolean) map.get(dataKey);
+                    data_JK_3_lengShuiFaKaiDu = (Integer) map.get(dataKey);
                 }
-                if (dataKey.equals(KEY_JK_XF_FENGJIQUEFENG)) {
-                    data_JK_XF_fengJiQueFeng = (Boolean) map.get(dataKey);
+                if (dataKey.equals(KEY_JK_3_RESHUIFAKAIDU)) {
+
+                    data_JK_3_reShuiFaKaiDu = (Integer) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_3_XINFENGWENDU)) {
+
+                    data_JK_3_xinFengWenDU = (Integer) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_3_JIASHIQIKAIDU)) {
+
+                    data_JK_3_jiaShiQIKaiDu = (Integer) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_3_BEIYONG)) {
+
+                    data_JK_3_beiYong = (Integer) map.get(dataKey);
                 }
                 if (dataKey.equals(KEY_JK_XF_TEMPREAL)) {
 
@@ -747,6 +994,26 @@ public class UnitJingTaiActivity extends BaseDevicesControlActivity implements V
                 if (dataKey.equals(KEY_JK_XF_HUMISET)) {
 
                     data_JK_XF_humiSet = (Integer) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_XF_LENGSHUIFAKAIDU)) {
+
+                    data_JK_XF_lengShuiFaKaiDu = (Integer) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_XF_RESHUIFAKAIDU)) {
+
+                    data_JK_XF_reShuiFaKaiDu = (Integer) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_XF_XINFENGWENDU)) {
+
+                    data_JK_XF_xinFengWenDU = (Integer) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_XF_JIASHIQIKAIDU)) {
+
+                    data_JK_XF_jiaShiQIKaiDu = (Integer) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_JK_XF_BEIYONG)) {
+
+                    data_JK_XF_beiYong = (Integer) map.get(dataKey);
                 }
             }
         }

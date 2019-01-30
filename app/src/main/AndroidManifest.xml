@@ -49,6 +49,9 @@
         <activity android:name=".DevicesControlActivity.AhuDeviceDataActivity"
             android:screenOrientation="portrait"
             />
+        <activity android:name=".DevicesControlActivity.PauDeviceDataActivity"
+            android:screenOrientation="portrait"
+            />
     </application>
 
 

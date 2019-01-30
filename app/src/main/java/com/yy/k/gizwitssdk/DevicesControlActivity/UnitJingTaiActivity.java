@@ -26,7 +26,7 @@ public class UnitJingTaiActivity extends BaseDevicesControlActivity implements V
 
     private final String TAG = "krguang";
     private static final int CODE_HANDLER_UI = 105;
-    private static final int AHU_HANDLER_UI = 106;
+    private static final int AHU_JINGTAI_HANDLER_UI = 106;
     /*
      * ===========================================================
      * 以下key值对应开发者在云端定义的数据点标识名
@@ -1021,7 +1021,7 @@ public class UnitJingTaiActivity extends BaseDevicesControlActivity implements V
         handler = app.getHandler();
         String GET_CAHNGE = "get_change";
         if (handler != null){
-            handler.obtainMessage(AHU_HANDLER_UI,GET_CAHNGE).sendToTarget();
+            handler.obtainMessage(AHU_JINGTAI_HANDLER_UI,GET_CAHNGE).sendToTarget();
         }
     }
 
@@ -1038,7 +1038,7 @@ public class UnitJingTaiActivity extends BaseDevicesControlActivity implements V
         Bundle bundle = new Bundle();
         bundle.putParcelable("mDevice",mDevice);
 
-        Intent intent = new Intent(UnitJingTaiActivity.this,AhuDeviceDataActivity.class);
+        Intent intent = new Intent(UnitJingTaiActivity.this, AhuDeviceDataActivity.class);
         intent.putExtra("extra_data",data);
         Log.d(TAG, "startActivityWithStringAHU: 要传出去的device = "+mDevice);
         intent.putExtras(bundle);

@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color"
+        android:fadingEdge="vertical"
+        android:paddingTop="10dp"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:scrollbars="vertical">
+
+
+            <!-- 实时温度A1(数值只读) -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:text="新风温度" />
+
+                <TextView
+                    android:id="@+id/tv_data_xinFengWenDU"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="end"
+                    android:textSize="16sp"
+                    android:textColor="@color/gray" />
+            </RelativeLayout>
+
+            <!-- 实时温度A1(数值只读) -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:text="送风温度" />
+
+                <TextView
+                    android:id="@+id/tv_data_tempReal"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="end"
+                    android:textSize="16sp"
+                    android:textColor="@color/gray" />
+            </RelativeLayout>
+
+
+            <!-- 实时湿度A1(数值只读) -->
+
+
+            <!-- 温度设定值A1(数值只读) -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:text="温度设定值" />
+
+                <TextView
+                    android:id="@+id/tv_data_tempSet"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="end"
+                    android:textSize="16sp"
+                    android:textColor="@color/gray" />
+            </RelativeLayout>
+
+
+            <!-- 湿度设定值A1(数值只读) -->
+
+
+            <!-- 冷水阀开度A1(数值只读) -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:text="冷水阀开度" />
+
+                <TextView
+                    android:id="@+id/tv_data_lengShuiFaKaiDu"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="end"
+                    android:textSize="16sp"
+                    android:textColor="@color/gray" />
+            </RelativeLayout>
+
+
+            <!-- 热水阀开度A1(数值只读) -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:text="热水阀开度" />
+
+                <TextView
+                    android:id="@+id/tv_data_reShuiFaKaiDu"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="end"
+                    android:textSize="16sp"
+                    android:textColor="@color/gray" />
+            </RelativeLayout>
+
+
+            <!-- 加湿器开度A1(数值只读) -->
+
+
+            <!-- 冬夏季A1(布尔只读) -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:text="冬夏季" />
+
+                <TextView
+                    android:id="@+id/tv_dongXiaJi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="冬季" />
+
+            </RelativeLayout>
+
+            <!-- 手自动A1(布尔只读) -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:text="手自动" />
+
+                <TextView
+                    android:id="@+id/tv_shouZiDong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="自动" />
+
+            </RelativeLayout>
+
+
+            <!-- 风机已启动A1(布尔只读) -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:text="风机已启动" />
+
+                <Button
+                    android:id="@+id/bt_fengJiYiQiDong"
+                    android:layout_width="@dimen/led_size"
+                    android:layout_height="@dimen/led_size"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/led_gray" />
+
+            </RelativeLayout>
+
+
+            <!-- 值班状态A1(布尔只读) -->
+
+
+            <!-- 电加热1A1(布尔只读) -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:text="电预热1" />
+
+                <Button
+                    android:id="@+id/bt_dianYuRe1"
+                    android:layout_width="@dimen/led_size"
+                    android:layout_height="@dimen/led_size"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/led_gray" />
+
+            </RelativeLayout>
+
+
+            <!-- 电加热2A1(布尔只读) -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:text="电预热2" />
+
+                <Button
+                    android:id="@+id/bt_dianYuRe2"
+                    android:layout_width="@dimen/led_size"
+                    android:layout_height="@dimen/led_size"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/led_gray" />
+
+            </RelativeLayout>
+
+
+            <!-- 电加热3A1(布尔只读) -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:text="电预热3" />
+
+                <Button
+                    android:id="@+id/bt_dianYuRe3"
+                    android:layout_width="@dimen/led_size"
+                    android:layout_height="@dimen/led_size"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/led_gray" />
+
+            </RelativeLayout>
+
+
+            <!-- 风机状态A1(布尔只读) -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:text="风机状态" />
+
+                <Button
+                    android:id="@+id/bt_fengJiStatus"
+                    android:layout_width="@dimen/led_size"
+                    android:layout_height="@dimen/led_size"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/led_gray" />
+
+            </RelativeLayout>
+
+
+            <!-- 中效报警A1(布尔只读) -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:text="中效报警" />
+
+                <Button
+                    android:id="@+id/bt_zhongXiaoBaoJing"
+                    android:layout_width="@dimen/led_size"
+                    android:layout_height="@dimen/led_size"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/led_gray" />
+
+            </RelativeLayout>
+
+
+            <!-- 电加热高温A1(布尔只读) -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:text="电预热高温" />
+
+                <Button
+                    android:id="@+id/bt_dianYuReGaoWen"
+                    android:layout_width="@dimen/led_size"
+                    android:layout_height="@dimen/led_size"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/led_gray" />
+
+            </RelativeLayout>
+
+
+            <!-- 风机缺风A1(布尔只读) -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:text="风机缺风" />
+
+                <Button
+                    android:id="@+id/bt_fengJiQueFeng"
+                    android:layout_width="@dimen/led_size"
+                    android:layout_height="@dimen/led_size"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/led_gray" />
+
+            </RelativeLayout>
+
+
+            <!-- 排风机已启动A1(布尔只读) -->
+
+
+            <!-- 盘管低温A1(布尔只读) -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:text="盘管低温" />
+
+                <Button
+                    android:id="@+id/bt_diWenPanGuan"
+                    android:layout_width="@dimen/led_size"
+                    android:layout_height="@dimen/led_size"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/led_gray" />
+
+            </RelativeLayout>
+
+
+            <!-- 灭菌运行A1(布尔只读) -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:text="灭菌运行" />
+
+                <Button
+                    android:id="@+id/bt_mieJunYunXing"
+                    android:layout_width="@dimen/led_size"
+                    android:layout_height="@dimen/led_size"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/led_gray" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -19,6 +19,8 @@ import com.yy.k.gizwitssdk.R;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 
+import utils.ConstantUtil;
+
 public class UnitDaLianActivity extends BaseDevicesControlActivity implements View.OnClickListener {
 
     /*
@@ -1506,7 +1508,7 @@ public class UnitDaLianActivity extends BaseDevicesControlActivity implements Vi
 
     private final String TAG = "krguang";
     private static final int CODE_DALIAN_HANDLER_UI = 107;
-    private static final int AHU_DALIAN_HANDLER_UI = 108;
+    private static final int AHU_HANDLER_UI = 106;
 
     private CustomApplication app;
     private Handler handler;
@@ -3033,10 +3035,17 @@ public class UnitDaLianActivity extends BaseDevicesControlActivity implements Vi
         handler = app.getHandler();
         String GET_CAHNGE = "get_change";
         if (handler != null){
-            handler.obtainMessage(AHU_DALIAN_HANDLER_UI,GET_CAHNGE).sendToTarget();
+            handler.obtainMessage(AHU_HANDLER_UI,GET_CAHNGE).sendToTarget();
         }
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        //取消订阅云端消息
+        mDevice.setListener(null);
+        mDevice.setSubscribe(ConstantUtil.DALIANYOUYI_PRODUCT_SECRET, false);
+    }
 
     private void startActivityWithStringAHU(String data){
 

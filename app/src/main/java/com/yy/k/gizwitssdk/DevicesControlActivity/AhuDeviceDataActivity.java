@@ -290,7 +290,6 @@ public class AhuDeviceDataActivity extends AppCompatActivity {
 
     private void updateJK_1() {
 
-        Log.d(TAG, "updateAhu301: data_JK_1_tempReal = "+data_JK_1_tempReal);
         tv_data_tempReal.setText(formatValue(data_JK_1_tempReal/10.0,0.1)+"℃");
         tv_data_humiReal.setText(formatValue(data_JK_1_humiReal/10.0,0.1)+"RH");
         tv_data_tempSet.setText(formatValue(data_JK_1_tempSet/10.0,0.1)+"℃");
@@ -1155,13 +1154,13 @@ public class AhuDeviceDataActivity extends AppCompatActivity {
 
     private void updateAhu306() {
 
-        tv_data_tempReal.setText(data_AHU306_tempReal+"℃");
-        tv_data_humiReal.setText(data_AHU306_humiReal+"RH");
-        tv_data_tempSet.setText(data_AHU306_tempSet+"℃");
-        tv_data_humiSet.setText(data_AHU306_humiSet+"RH");
-        tv_data_lengShuiFaKaiDu.setText(data_AHU306_lengShuiFaKaiDu+"%");
-        tv_data_reShuiFaKaiDu.setText(data_AHU306_reShuiFaKaiDu+"%");
-        tv_data_jiaShiQIKaiDu.setText(data_AHU306_jiaShiQIKaiDu+"%");
+        tv_data_tempReal.setText(formatValue(data_AHU306_tempReal/10.0,0.1)+"℃");
+        tv_data_humiReal.setText(formatValue(data_AHU306_humiReal/10.0,0.1)+"RH");
+        tv_data_tempSet.setText(formatValue(data_AHU306_tempSet/10.0,0.1)+"℃");
+        tv_data_humiSet.setText(formatValue(data_AHU306_humiSet/10.0,0.1)+"RH");
+        tv_data_lengShuiFaKaiDu.setText(formatValue(data_AHU306_lengShuiFaKaiDu/10.0,0.1)+"%");
+        tv_data_reShuiFaKaiDu.setText(formatValue(data_AHU306_reShuiFaKaiDu/10.0,0.1)+"%");
+        tv_data_jiaShiQIKaiDu.setText(formatValue(data_AHU306_jiaShiQIKaiDu/10.0,0.1)+"%");
 
         if (data_AHU306_dongXiaJi){
             tv_dongXiaJi.setText("夏季");
@@ -1251,13 +1250,13 @@ public class AhuDeviceDataActivity extends AppCompatActivity {
 
     private void updateAhu307() {
 
-        tv_data_tempReal.setText(data_AHU307_tempReal+"℃");
-        tv_data_humiReal.setText(data_AHU307_humiReal+"RH");
-        tv_data_tempSet.setText(data_AHU307_tempSet+"℃");
-        tv_data_humiSet.setText(data_AHU307_humiSet+"RH");
-        tv_data_lengShuiFaKaiDu.setText(data_AHU307_lengShuiFaKaiDu+"%");
-        tv_data_reShuiFaKaiDu.setText(data_AHU307_reShuiFaKaiDu+"%");
-        tv_data_jiaShiQIKaiDu.setText(data_AHU307_jiaShiQIKaiDu+"%");
+        tv_data_tempReal.setText(formatValue(data_AHU307_tempReal/10.0,0.1)+"℃");
+        tv_data_humiReal.setText(formatValue(data_AHU307_humiReal/10.0,0.1)+"RH");
+        tv_data_tempSet.setText(formatValue(data_AHU307_tempSet/10.0,0.1)+"℃");
+        tv_data_humiSet.setText(formatValue(data_AHU307_humiSet/10.0,0.1)+"RH");
+        tv_data_lengShuiFaKaiDu.setText(formatValue(data_AHU307_lengShuiFaKaiDu/10.0,0.1)+"%");
+        tv_data_reShuiFaKaiDu.setText(formatValue(data_AHU307_reShuiFaKaiDu/10.0,0.1)+"%");
+        tv_data_jiaShiQIKaiDu.setText(formatValue(data_AHU307_jiaShiQIKaiDu/10.0,0.1)+"%");
 
         if (data_AHU307_dongXiaJi){
             tv_dongXiaJi.setText("夏季");
@@ -1347,13 +1346,13 @@ public class AhuDeviceDataActivity extends AppCompatActivity {
 
     private void updateAhu308() {
 
-        tv_data_tempReal.setText(data_AHU308_tempReal+"℃");
-        tv_data_humiReal.setText(data_AHU308_humiReal+"RH");
-        tv_data_tempSet.setText(data_AHU308_tempSet+"℃");
-        tv_data_humiSet.setText(data_AHU308_humiSet+"RH");
-        tv_data_lengShuiFaKaiDu.setText(data_AHU308_lengShuiFaKaiDu+"%");
-        tv_data_reShuiFaKaiDu.setText(data_AHU308_reShuiFaKaiDu+"%");
-        tv_data_jiaShiQIKaiDu.setText(data_AHU308_jiaShiQIKaiDu+"%");
+        tv_data_tempReal.setText(formatValue(data_AHU308_tempReal/10.0,0.1)+"℃");
+        tv_data_humiReal.setText(formatValue(data_AHU308_humiReal/10.0,0.1)+"RH");
+        tv_data_tempSet.setText(formatValue(data_AHU308_tempSet/10.0,0.1)+"℃");
+        tv_data_humiSet.setText(formatValue(data_AHU308_humiSet/10.0,0.1)+"RH");
+        tv_data_lengShuiFaKaiDu.setText(formatValue(data_AHU308_lengShuiFaKaiDu/10.0,0.1)+"%");
+        tv_data_reShuiFaKaiDu.setText(formatValue(data_AHU308_reShuiFaKaiDu/10.0,0.1)+"%");
+        tv_data_jiaShiQIKaiDu.setText(formatValue(data_AHU308_jiaShiQIKaiDu/10.0,0.1)+"%");
 
         if (data_AHU308_dongXiaJi){
             tv_dongXiaJi.setText("夏季");

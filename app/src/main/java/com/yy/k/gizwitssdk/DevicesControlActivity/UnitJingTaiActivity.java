@@ -562,7 +562,6 @@ public class UnitJingTaiActivity extends BaseDevicesControlActivity implements V
         tv_data_JK_XF_tempSet = (TextView) findViewById(R.id.tv_main_state_tempset_JK_XF);
         tv_data_JK_XF_humiSet = (TextView) findViewById(R.id.tv_main_state_humiset_JK_XF);
 
-
         ll_overview_JK_1 = findViewById(R.id.ll_JK_1);
         ll_overview_JK_2 = findViewById(R.id.ll_JK_2);
         ll_overview_JK_3 = findViewById(R.id.ll_JK_3);

@@ -38,13 +38,13 @@ public abstract class BaseDevicesControlActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(TAG, "onCreate: 看看什么时候执行父类oncreate");
         initDevice();
     }
 
     protected void initDevice() {
-
         mDevice = (GizWifiDevice)this.getIntent().getParcelableExtra("gizWifiDevice");
-        Log.d(TAG, "initDevice: "+mDevice);
+
         if (mDevice != null){
             mDevice.setListener(mListener);
         }

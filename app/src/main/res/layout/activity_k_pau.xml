@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="1dp"
                 android:background="@color/white"
-                android:padding="10dp" >
+                android:padding="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -48,8 +48,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:gravity="end"
-                    android:textSize="16sp"
-                    android:textColor="@color/gray" />
+                    android:textColor="@color/gray"
+                    android:textSize="16sp" />
             </RelativeLayout>
 
             <!-- 实时温度A1(数值只读) -->
@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="1dp"
                 android:background="@color/white"
-                android:padding="10dp" >
+                android:padding="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -73,8 +73,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:gravity="end"
-                    android:textSize="16sp"
-                    android:textColor="@color/gray" />
+                    android:textColor="@color/gray"
+                    android:textSize="16sp" />
             </RelativeLayout>
 
 
@@ -87,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="1dp"
                 android:background="@color/white"
-                android:padding="10dp" >
+                android:padding="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -102,8 +102,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:gravity="end"
-                    android:textSize="16sp"
-                    android:textColor="@color/gray" />
+                    android:textColor="@color/gray"
+                    android:textSize="16sp" />
             </RelativeLayout>
 
 
@@ -116,7 +116,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="1dp"
                 android:background="@color/white"
-                android:padding="10dp" >
+                android:padding="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -131,8 +131,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:gravity="end"
-                    android:textSize="16sp"
-                    android:textColor="@color/gray" />
+                    android:textColor="@color/gray"
+                    android:textSize="16sp" />
             </RelativeLayout>
 
 
@@ -142,7 +142,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="1dp"
                 android:background="@color/white"
-                android:padding="10dp" >
+                android:padding="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -157,8 +157,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:gravity="end"
-                    android:textSize="16sp"
-                    android:textColor="@color/gray" />
+                    android:textColor="@color/gray"
+                    android:textSize="16sp" />
             </RelativeLayout>
 
 

@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">GizwitsSDK</string>
+    <string name="app_name">空调机组远程监控</string>
     <string name="devicedisconnected">未连接</string>
 </resources>

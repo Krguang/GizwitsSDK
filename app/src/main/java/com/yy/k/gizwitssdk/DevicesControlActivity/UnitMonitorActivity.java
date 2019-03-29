@@ -191,9 +191,9 @@ public class UnitMonitorActivity extends BaseDevicesControlActivity {
         }
 
         if (data_shouZiDong){
-            tv_shouZiDong.setText("手动");
-        }else {
             tv_shouZiDong.setText("自动");
+        }else {
+            tv_shouZiDong.setText("手动");
         }
 
         if (data_fengJiYiQiDong){
@@ -257,9 +257,9 @@ public class UnitMonitorActivity extends BaseDevicesControlActivity {
         }
 
         if (data_dianJiaReGaoWen){
-            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_fengJiQueFeng){

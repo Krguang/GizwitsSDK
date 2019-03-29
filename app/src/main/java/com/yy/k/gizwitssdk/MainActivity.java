@@ -11,10 +11,10 @@ import android.net.NetworkInfo;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
+import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
 import android.view.View;
@@ -35,6 +35,7 @@ import com.qmuiteam.qmui.widget.dialog.QMUIDialogAction;
 import com.qmuiteam.qmui.widget.dialog.QMUITipDialog;
 import com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity;
 import com.yy.k.gizwitssdk.DevicesControlActivity.UnitJingTaiActivity;
+import com.yy.k.gizwitssdk.DevicesControlActivity.UnitMonitorActivity;
 import com.yy.k.gizwitssdk.adapter.LVDevicesAdapter;
 import com.yzq.zxinglibrary.android.CaptureActivity;
 import com.yzq.zxinglibrary.common.Constant;
@@ -297,6 +298,14 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent2 = new Intent(MainActivity.this, UnitDaLianActivity.class);
                 intent2.putExtra("gizWifiDevice", gizWifiDevice);
                 startActivity(intent2);
+                break;
+            case ConstantUtil.MONITOR_PRODUCT_KEY:
+                gizWifiDevice.setSubscribe(ConstantUtil.MONITOR_PRODUCT_SECRET,true);
+                Intent intent3 = new Intent(MainActivity.this, UnitMonitorActivity.class);
+                intent3.putExtra("gizWifiDevice", gizWifiDevice);
+                startActivity(intent3);
+                break;
+
 
         }
     }
@@ -420,6 +429,11 @@ public class MainActivity extends AppCompatActivity {
         product2.put("productKey", ConstantUtil.DALIANYOUYI_PRODUCT_KEY);
         product2.put("productSecret", ConstantUtil.DALIANYOUYI_PRODUCT_SECRET);
         productInfo.add(product2);
+
+        ConcurrentHashMap<String, String> product3 = new ConcurrentHashMap<>();
+        product3.put("productKey", ConstantUtil.MONITOR_PRODUCT_KEY);
+        product3.put("productSecret", ConstantUtil.MONITOR_PRODUCT_SECRET);
+        productInfo.add(product3);
 
         GizWifiSDK.sharedInstance().startWithAppInfo(this, appInfo, productInfo, null, false);
     }

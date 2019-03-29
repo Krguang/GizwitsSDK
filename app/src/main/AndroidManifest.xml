@@ -52,6 +52,7 @@
         <activity android:name=".DevicesControlActivity.PauDeviceDataActivity"
             android:screenOrientation="portrait"
             />
+        <activity android:name=".DevicesControlActivity.UnitMonitorActivity" />
     </application>
 
 

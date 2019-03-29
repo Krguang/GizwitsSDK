@@ -22,4 +22,9 @@ public class ConstantUtil {
     public static final String DALIANYOUYI_PRODUCT_KEY = "418482844f12480aa099ed32c6c37c57";
     //定大连友谊医院密钥
     public static final String DALIANYOUYI_PRODUCT_SECRET = "0ecdb14fc62d4440b10147ed2214dc4e";
+
+
+    public static final String MONITOR_PRODUCT_KEY = "e14842824e624ed19c9c00d88f7616ff";
+    public static final String MONITOR_PRODUCT_SECRET = "be64855c269144288fd2d3be553a2e50";
+
 }

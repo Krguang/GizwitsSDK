@@ -23,7 +23,7 @@ public class UnitMonitorActivity extends BaseDevicesControlActivity {
 
 
     private static final String TAG = "krguang";
-    private static final int CODE_HANDLER_UI = 108;
+    private static final int CODE_HANDLER_UI = 108;     //进入第一界面收到数据后传递的句柄用来刷新本页面的数据显示
 
     /*
      * ===========================================================

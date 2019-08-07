@@ -1507,7 +1507,7 @@ public class UnitDaLianActivity extends BaseDevicesControlActivity implements Vi
     private View ll_overview_pau305;
 
     private final String TAG = "krguang";
-    private static final int CODE_DALIAN_HANDLER_UI = 107;
+    private static final int CODE_DALIAN_HANDLER_UI = 107;//用来刷新本界面的数据的句柄
     private static final int AHU_HANDLER_UI = 106;
 
     private CustomApplication app;

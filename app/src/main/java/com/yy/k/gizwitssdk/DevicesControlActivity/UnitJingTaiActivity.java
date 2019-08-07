@@ -25,8 +25,8 @@ public class UnitJingTaiActivity extends BaseDevicesControlActivity implements V
 
 
     private final String TAG = "krguang";
-    private static final int CODE_HANDLER_UI = 105;
-    private static final int AHU_HANDLER_UI = 106;
+    private static final int CODE_HANDLER_UI = 105; //用来刷新本界面UI的句柄
+    private static final int AHU_HANDLER_UI = 106;  //数据更新时，用来向下一个界面传递消息的句柄
     /*
      * ===========================================================
      * 以下key值对应开发者在云端定义的数据点标识名

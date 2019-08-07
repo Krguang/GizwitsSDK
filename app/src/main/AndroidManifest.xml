@@ -53,8 +53,6 @@
             android:screenOrientation="portrait"
             />
         <activity android:name=".DevicesControlActivity.UnitMonitorActivity" />
+        <activity android:name=".DevicesControlActivity.UnitTianJinSanYuanActivity" />
     </application>
-
-
-
 </manifest>

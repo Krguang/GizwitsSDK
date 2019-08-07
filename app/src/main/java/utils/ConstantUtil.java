@@ -23,8 +23,14 @@ public class ConstantUtil {
     //定大连友谊医院密钥
     public static final String DALIANYOUYI_PRODUCT_SECRET = "0ecdb14fc62d4440b10147ed2214dc4e";
 
-
+    //手操器key
     public static final String MONITOR_PRODUCT_KEY = "e14842824e624ed19c9c00d88f7616ff";
+    //手操器密钥
     public static final String MONITOR_PRODUCT_SECRET = "be64855c269144288fd2d3be553a2e50";
+
+    //天津三院Key
+    public static final String TIANJINSANYUAN_PRODUCT_KEY = "b5a64a03916144f08fec7182dee4cf82";
+    //天津三院密钥
+    public static final String TIANJINSANYUAN_PRODUCT_SECRET = "6282e923fb324d1d8557bdcb0ae41333";
 
 }

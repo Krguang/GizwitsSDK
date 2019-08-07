@@ -33,97 +33,15 @@ import com.yy.k.gizwitssdk.R;
 import java.text.DecimalFormat;
 import java.util.concurrent.ConcurrentHashMap;
 
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU301_diWenPanGuan;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU301_dianYuRe1;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU301_dianYuRe2;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU301_dianYuRe3;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU301_dianYuReGaoWen;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU301_dongXiaJi;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU301_fengJiQueFeng;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU301_fengJiStatus;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU301_fengJiYiQiDong;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU301_lengShuiFaKaiDu;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU301_mieJunYunXing;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU301_reShuiFaKaiDu;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU301_shouZiDong;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU301_tempReal;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU301_tempSet;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU301_xinFengWenDU;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU301_zhongXiaoBaoJing;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU302_diWenPanGuan;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU302_dianYuRe1;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU302_dianYuRe2;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU302_dianYuRe3;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU302_dianYuReGaoWen;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU302_dongXiaJi;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU302_fengJiQueFeng;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU302_fengJiStatus;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU302_fengJiYiQiDong;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU302_lengShuiFaKaiDu;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU302_mieJunYunXing;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU302_reShuiFaKaiDu;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU302_shouZiDong;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU302_tempReal;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU302_tempSet;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU302_xinFengWenDU;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU302_zhongXiaoBaoJing;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU303_diWenPanGuan;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU303_dianYuRe1;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU303_dianYuRe2;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU303_dianYuRe3;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU303_dianYuReGaoWen;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU303_dongXiaJi;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU303_fengJiQueFeng;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU303_fengJiStatus;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU303_fengJiYiQiDong;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU303_lengShuiFaKaiDu;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU303_mieJunYunXing;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU303_reShuiFaKaiDu;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU303_shouZiDong;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU303_tempReal;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU303_tempSet;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU303_xinFengWenDU;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU303_zhongXiaoBaoJing;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU304_diWenPanGuan;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU304_dianYuRe1;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU304_dianYuRe2;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU304_dianYuRe3;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU304_dianYuReGaoWen;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU304_dongXiaJi;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU304_fengJiQueFeng;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU304_fengJiStatus;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU304_fengJiYiQiDong;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU304_lengShuiFaKaiDu;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU304_mieJunYunXing;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU304_reShuiFaKaiDu;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU304_shouZiDong;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU304_tempReal;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU304_tempSet;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU304_xinFengWenDU;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU304_zhongXiaoBaoJing;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU305_diWenPanGuan;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU305_dianYuRe1;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU305_dianYuRe2;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU305_dianYuRe3;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU305_dianYuReGaoWen;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU305_dongXiaJi;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU305_fengJiQueFeng;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU305_fengJiStatus;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU305_fengJiYiQiDong;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU305_lengShuiFaKaiDu;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU305_mieJunYunXing;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU305_reShuiFaKaiDu;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU305_shouZiDong;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU305_tempReal;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU305_tempSet;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU305_xinFengWenDU;
-import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.data_PAU305_zhongXiaoBaoJing;
+import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.*;
+import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitTianJinSanYuanActivity.*;
+
 
 public class PauDeviceDataActivity extends AppCompatActivity {
 
 
     private static final String TAG = "krguang";
-    private static final int AHU_DALIAN_HANDLER_UI = 108;
+    private static final int AHU_HANDLER_UI = 106;
     protected QMUITopBar qmuiTopBar;
 
     private TextView tv_data_tempReal;
@@ -154,7 +72,7 @@ public class PauDeviceDataActivity extends AppCompatActivity {
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             switch (msg.what){
-                case AHU_DALIAN_HANDLER_UI:
+                case AHU_HANDLER_UI:
                     Log.d(TAG, "handleMessage: 收到了第一界面的消息:"+msg.arg1);
                     updateUI();
             }
@@ -263,8 +181,104 @@ public class PauDeviceDataActivity extends AppCompatActivity {
                 updatePau305();
                 break;
 
+            case "MAU01":
+                updateMau01();
+                break;
+
+            case "MAU02":
+                updateMau02();
+                break;
+
+            case "MAU03":
+                updateMau03();
+                break;
+
             default:break;
         }
+    }
+
+    private void updateMau01() {
+        tv_data_tempReal.setText(formatValue(data_MAU01_tempReal/10.0,0.1)+"℃");
+        tv_data_xinFengWenDu.setText(formatValue(data_MAU01_xinFengWenDU/10.0,0.1)+"℃");
+        tv_data_tempSet.setText(formatValue(data_MAU01_tempSet/10.0,0.1)+"℃");
+        tv_data_lengShuiFaKaiDu.setText(formatValue(data_MAU01_lengShuiFaKaiDu/10.0,0.1)+"%");
+        tv_data_reShuiFaKaiDu.setText(formatValue(data_MAU01_reShuiFaKaiDu/10.0,0.1)+"%");
+
+        if (data_MAU01_dongXiaJi){
+            tv_dongXiaJi.setText("夏季");
+        }else{
+            tv_dongXiaJi.setText("冬季");
+        }
+
+        if (data_MAU01_shouZiDong){
+            tv_shouZiDong.setText("手动");
+        }else {
+            tv_shouZiDong.setText("自动");
+        }
+
+        if (data_MAU01_fengJiYiQiDong){
+            bt_fengJiYiQiDong.setBackgroundResource(R.drawable.led_green);
+        }else {
+            bt_fengJiYiQiDong.setBackgroundResource(R.drawable.led_gray);
+        }
+
+        if (data_MAU01_dianJiaRe1){
+            bt_dianYuRe1.setBackgroundResource(R.drawable.led_green);
+        }else {
+            bt_dianYuRe1.setBackgroundResource(R.drawable.led_gray);
+        }
+
+        if (data_MAU01_dianJiaRe2){
+            bt_dianYuRe2.setBackgroundResource(R.drawable.led_green);
+        }else {
+            bt_dianYuRe2.setBackgroundResource(R.drawable.led_gray);
+        }
+
+        if (data_MAU01_dianJiaRe3){
+            bt_dianYuRe3.setBackgroundResource(R.drawable.led_green);
+        }else {
+            bt_dianYuRe3.setBackgroundResource(R.drawable.led_gray);
+        }
+
+        if (data_MAU01_fengJiStatus){
+            bt_fengJiStatus.setBackgroundResource(R.drawable.led_green);
+        }else {
+            bt_fengJiStatus.setBackgroundResource(R.drawable.led_gray);
+        }
+
+        if (data_MAU01_zhongXiaoBaoJing){
+            bt_zhongXiaoBaoJing.setBackgroundResource(R.drawable.led_red);
+        }else {
+            bt_zhongXiaoBaoJing.setBackgroundResource(R.drawable.led_gray);
+        }
+
+        if (data_MAU01_dianJiaReGaoWen){
+            bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_red);
+        }else {
+            bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }
+
+        if (data_MAU01_fengJiQueFeng){
+            bt_fengJiQueFeng.setBackgroundResource(R.drawable.led_red);
+        }else {
+            bt_fengJiQueFeng.setBackgroundResource(R.drawable.led_gray);
+        }
+
+        if (data_MAU01_diWenPanGuan){
+            bt_diWenPanGuan.setBackgroundResource(R.drawable.led_red);
+        }else {
+            bt_diWenPanGuan.setBackgroundResource(R.drawable.led_gray);
+        }
+
+        if (data_MAU01_mieJunYunXing){
+            bt_mieJunYunXing.setBackgroundResource(R.drawable.led_green);
+        }else {
+            bt_mieJunYunXing.setBackgroundResource(R.drawable.led_gray);
+        }
+    }
+    private void updateMau02() {
+    }
+    private void updateMau03() {
     }
 
     private void updatePau301() {

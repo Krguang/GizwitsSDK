@@ -2993,11 +2993,11 @@ public class UnitTianJinSanYuanActivity extends BaseDevicesControlActivity imple
                 break;
 
             case R.id.ll_ahu09:
-                startActivityWithStringAHU("AHU08");
+                startActivityWithStringAHU("AHU09");
                 break;
 
             case R.id.ll_ahu10:
-                startActivityWithStringAHU("AHU08");
+                startActivityWithStringAHU("AHU10");
                 break;
 
             case R.id.ll_mau01:

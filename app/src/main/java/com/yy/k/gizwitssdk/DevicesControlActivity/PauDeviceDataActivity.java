@@ -277,8 +277,162 @@ public class PauDeviceDataActivity extends AppCompatActivity {
         }
     }
     private void updateMau02() {
+        tv_data_tempReal.setText(formatValue(data_MAU02_tempReal/10.0,0.1)+"℃");
+        tv_data_xinFengWenDu.setText(formatValue(data_MAU02_xinFengWenDU/10.0,0.1)+"℃");
+        tv_data_tempSet.setText(formatValue(data_MAU02_tempSet/10.0,0.1)+"℃");
+        tv_data_lengShuiFaKaiDu.setText(formatValue(data_MAU02_lengShuiFaKaiDu/10.0,0.1)+"%");
+        tv_data_reShuiFaKaiDu.setText(formatValue(data_MAU02_reShuiFaKaiDu/10.0,0.1)+"%");
+
+        if (data_MAU02_dongXiaJi){
+            tv_dongXiaJi.setText("夏季");
+        }else{
+            tv_dongXiaJi.setText("冬季");
+        }
+
+        if (data_MAU02_shouZiDong){
+            tv_shouZiDong.setText("手动");
+        }else {
+            tv_shouZiDong.setText("自动");
+        }
+
+        if (data_MAU02_fengJiYiQiDong){
+            bt_fengJiYiQiDong.setBackgroundResource(R.drawable.led_green);
+        }else {
+            bt_fengJiYiQiDong.setBackgroundResource(R.drawable.led_gray);
+        }
+
+        if (data_MAU02_dianJiaRe1){
+            bt_dianYuRe1.setBackgroundResource(R.drawable.led_green);
+        }else {
+            bt_dianYuRe1.setBackgroundResource(R.drawable.led_gray);
+        }
+
+        if (data_MAU02_dianJiaRe2){
+            bt_dianYuRe2.setBackgroundResource(R.drawable.led_green);
+        }else {
+            bt_dianYuRe2.setBackgroundResource(R.drawable.led_gray);
+        }
+
+        if (data_MAU02_dianJiaRe3){
+            bt_dianYuRe3.setBackgroundResource(R.drawable.led_green);
+        }else {
+            bt_dianYuRe3.setBackgroundResource(R.drawable.led_gray);
+        }
+
+        if (data_MAU02_fengJiStatus){
+            bt_fengJiStatus.setBackgroundResource(R.drawable.led_green);
+        }else {
+            bt_fengJiStatus.setBackgroundResource(R.drawable.led_gray);
+        }
+
+        if (data_MAU02_zhongXiaoBaoJing){
+            bt_zhongXiaoBaoJing.setBackgroundResource(R.drawable.led_red);
+        }else {
+            bt_zhongXiaoBaoJing.setBackgroundResource(R.drawable.led_gray);
+        }
+
+        if (data_MAU02_dianJiaReGaoWen){
+            bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_red);
+        }else {
+            bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }
+
+        if (data_MAU02_fengJiQueFeng){
+            bt_fengJiQueFeng.setBackgroundResource(R.drawable.led_red);
+        }else {
+            bt_fengJiQueFeng.setBackgroundResource(R.drawable.led_gray);
+        }
+
+        if (data_MAU02_diWenPanGuan){
+            bt_diWenPanGuan.setBackgroundResource(R.drawable.led_red);
+        }else {
+            bt_diWenPanGuan.setBackgroundResource(R.drawable.led_gray);
+        }
+
+        if (data_MAU02_mieJunYunXing){
+            bt_mieJunYunXing.setBackgroundResource(R.drawable.led_green);
+        }else {
+            bt_mieJunYunXing.setBackgroundResource(R.drawable.led_gray);
+        }
     }
     private void updateMau03() {
+        tv_data_tempReal.setText(formatValue(data_MAU03_tempReal/10.0,0.1)+"℃");
+        tv_data_xinFengWenDu.setText(formatValue(data_MAU03_xinFengWenDU/10.0,0.1)+"℃");
+        tv_data_tempSet.setText(formatValue(data_MAU03_tempSet/10.0,0.1)+"℃");
+        tv_data_lengShuiFaKaiDu.setText(formatValue(data_MAU03_lengShuiFaKaiDu/10.0,0.1)+"%");
+        tv_data_reShuiFaKaiDu.setText(formatValue(data_MAU03_reShuiFaKaiDu/10.0,0.1)+"%");
+
+        if (data_MAU03_dongXiaJi){
+            tv_dongXiaJi.setText("夏季");
+        }else{
+            tv_dongXiaJi.setText("冬季");
+        }
+
+        if (data_MAU03_shouZiDong){
+            tv_shouZiDong.setText("手动");
+        }else {
+            tv_shouZiDong.setText("自动");
+        }
+
+        if (data_MAU03_fengJiYiQiDong){
+            bt_fengJiYiQiDong.setBackgroundResource(R.drawable.led_green);
+        }else {
+            bt_fengJiYiQiDong.setBackgroundResource(R.drawable.led_gray);
+        }
+
+        if (data_MAU03_dianJiaRe1){
+            bt_dianYuRe1.setBackgroundResource(R.drawable.led_green);
+        }else {
+            bt_dianYuRe1.setBackgroundResource(R.drawable.led_gray);
+        }
+
+        if (data_MAU03_dianJiaRe2){
+            bt_dianYuRe2.setBackgroundResource(R.drawable.led_green);
+        }else {
+            bt_dianYuRe2.setBackgroundResource(R.drawable.led_gray);
+        }
+
+        if (data_MAU03_dianJiaRe3){
+            bt_dianYuRe3.setBackgroundResource(R.drawable.led_green);
+        }else {
+            bt_dianYuRe3.setBackgroundResource(R.drawable.led_gray);
+        }
+
+        if (data_MAU03_fengJiStatus){
+            bt_fengJiStatus.setBackgroundResource(R.drawable.led_green);
+        }else {
+            bt_fengJiStatus.setBackgroundResource(R.drawable.led_gray);
+        }
+
+        if (data_MAU03_zhongXiaoBaoJing){
+            bt_zhongXiaoBaoJing.setBackgroundResource(R.drawable.led_red);
+        }else {
+            bt_zhongXiaoBaoJing.setBackgroundResource(R.drawable.led_gray);
+        }
+
+        if (data_MAU03_dianJiaReGaoWen){
+            bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_red);
+        }else {
+            bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }
+
+        if (data_MAU03_fengJiQueFeng){
+            bt_fengJiQueFeng.setBackgroundResource(R.drawable.led_red);
+        }else {
+            bt_fengJiQueFeng.setBackgroundResource(R.drawable.led_gray);
+        }
+
+        if (data_MAU03_diWenPanGuan){
+            bt_diWenPanGuan.setBackgroundResource(R.drawable.led_red);
+        }else {
+            bt_diWenPanGuan.setBackgroundResource(R.drawable.led_gray);
+        }
+
+        if (data_MAU03_mieJunYunXing){
+            bt_mieJunYunXing.setBackgroundResource(R.drawable.led_green);
+        }else {
+            bt_mieJunYunXing.setBackgroundResource(R.drawable.led_gray);
+        }
     }
 
     private void updatePau301() {

@@ -33,4 +33,9 @@ public class ConstantUtil {
     //天津三院密钥
     public static final String TIANJINSANYUAN_PRODUCT_SECRET = "6282e923fb324d1d8557bdcb0ae41333";
 
+    //开元骨科Key
+    public static final String KAIYUANGUKE_PRODUCT_KEY = "9f43c8726e23466c911b32299a0bbc83";
+    //开元骨科密钥
+    public static final String KAIYUANGUKE_PRODUCT_SECRET = "1fc30386cfcf4923abb7c86e1b4e78e8";
+
 }

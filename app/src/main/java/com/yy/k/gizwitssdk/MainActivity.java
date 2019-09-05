@@ -35,6 +35,7 @@ import com.qmuiteam.qmui.widget.dialog.QMUIDialogAction;
 import com.qmuiteam.qmui.widget.dialog.QMUITipDialog;
 import com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity;
 import com.yy.k.gizwitssdk.DevicesControlActivity.UnitJingTaiActivity;
+import com.yy.k.gizwitssdk.DevicesControlActivity.UnitKaiYuanGuKeActivity;
 import com.yy.k.gizwitssdk.DevicesControlActivity.UnitMonitorActivity;
 import com.yy.k.gizwitssdk.DevicesControlActivity.UnitTianJinSanYuanActivity;
 import com.yy.k.gizwitssdk.adapter.LVDevicesAdapter;
@@ -313,6 +314,13 @@ public class MainActivity extends AppCompatActivity {
                 intent4.putExtra("gizWifiDevice", gizWifiDevice);
                 startActivity(intent4);
                 break;
+
+            case ConstantUtil.KAIYUANGUKE_PRODUCT_KEY:
+                gizWifiDevice.setSubscribe(ConstantUtil.KAIYUANGUKE_PRODUCT_SECRET,true);
+                Intent intent5 = new Intent(MainActivity.this, UnitKaiYuanGuKeActivity.class);
+                intent5.putExtra("gizWifiDevice", gizWifiDevice);
+                startActivity(intent5);
+                break;
         }
     }
 
@@ -442,9 +450,9 @@ public class MainActivity extends AppCompatActivity {
         productInfo.add(product3);
 
         ConcurrentHashMap<String, String> product4 = new ConcurrentHashMap<>();
-        product3.put("productKey", ConstantUtil.TIANJINSANYUAN_PRODUCT_KEY);
-        product3.put("productSecret", ConstantUtil.TIANJINSANYUAN_PRODUCT_SECRET);
-        productInfo.add(product3);
+        product4.put("productKey", ConstantUtil.TIANJINSANYUAN_PRODUCT_KEY);
+        product4.put("productSecret", ConstantUtil.TIANJINSANYUAN_PRODUCT_SECRET);
+        productInfo.add(product4);
 
         GizWifiSDK.sharedInstance().startWithAppInfo(this, appInfo, productInfo, null, false);
     }

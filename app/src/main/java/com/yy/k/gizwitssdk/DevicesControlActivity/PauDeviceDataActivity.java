@@ -253,9 +253,9 @@ public class PauDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_MAU01_dianJiaReGaoWen){
-            bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_MAU01_fengJiQueFeng){
@@ -332,9 +332,9 @@ public class PauDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_MAU02_dianJiaReGaoWen){
-            bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_MAU02_fengJiQueFeng){
@@ -411,9 +411,9 @@ public class PauDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_MAU03_dianJiaReGaoWen){
-            bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_MAU03_fengJiQueFeng){
@@ -492,9 +492,9 @@ public class PauDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_PAU301_dianYuReGaoWen){
-            bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_PAU301_fengJiQueFeng){
@@ -574,9 +574,9 @@ public class PauDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_PAU302_dianYuReGaoWen){
-            bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_PAU302_fengJiQueFeng){
@@ -656,9 +656,9 @@ public class PauDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_PAU303_dianYuReGaoWen){
-            bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_PAU303_fengJiQueFeng){
@@ -739,9 +739,9 @@ public class PauDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_PAU304_dianYuReGaoWen){
-            bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_PAU304_fengJiQueFeng){
@@ -822,9 +822,9 @@ public class PauDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_PAU305_dianYuReGaoWen){
-            bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianYuReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_PAU305_fengJiQueFeng){
@@ -845,7 +845,6 @@ public class PauDeviceDataActivity extends AppCompatActivity {
             bt_mieJunYunXing.setBackgroundResource(R.drawable.led_gray);
         }
     }
-
 
     /**
      *Description:显示格式化数值，保留对应分辨率的小数个数，比如传入参数（20.3656，0.01），将返回20.37

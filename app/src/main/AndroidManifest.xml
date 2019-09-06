@@ -54,5 +54,8 @@
             />
         <activity android:name=".DevicesControlActivity.UnitMonitorActivity" />
         <activity android:name=".DevicesControlActivity.UnitTianJinSanYuanActivity" />
+        <activity android:name=".DevicesControlActivity.UnitKaiYuanGuKeActivity" />
+        <activity android:name=".DevicesControlActivity.AhukaiYuanDataActivity" />
+        <activity android:name=".DevicesControlActivity.PauKaiYuanDataActivity" />
     </application>
 </manifest>

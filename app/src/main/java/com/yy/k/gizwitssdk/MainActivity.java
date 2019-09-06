@@ -454,6 +454,11 @@ public class MainActivity extends AppCompatActivity {
         product4.put("productSecret", ConstantUtil.TIANJINSANYUAN_PRODUCT_SECRET);
         productInfo.add(product4);
 
+        ConcurrentHashMap<String, String> product5 = new ConcurrentHashMap<>();
+        product5.put("productKey", ConstantUtil.KAIYUANGUKE_PRODUCT_KEY);
+        product5.put("productSecret", ConstantUtil.KAIYUANGUKE_PRODUCT_SECRET);
+        productInfo.add(product5);
+
         GizWifiSDK.sharedInstance().startWithAppInfo(this, appInfo, productInfo, null, false);
     }
 
@@ -507,6 +512,7 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 // 绑定失败
                 Log.d(TAG, "didBindDevice: 绑定失败");
+                Log.d(TAG, "didBindDevice: result == "+result);
             }
         }
     };

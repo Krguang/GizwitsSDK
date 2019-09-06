@@ -313,9 +313,9 @@ public class AhuDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_AHU01_dianJiaReGaoWen){
-            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_AHU01_fengJiQueFeng){
@@ -408,9 +408,9 @@ public class AhuDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_AHU02_dianJiaReGaoWen){
-            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_AHU02_fengJiQueFeng){
@@ -505,9 +505,9 @@ public class AhuDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_AHU03_dianJiaReGaoWen){
-            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_AHU03_fengJiQueFeng){
@@ -600,9 +600,9 @@ public class AhuDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_AHU04_dianJiaReGaoWen){
-            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_AHU04_fengJiQueFeng){
@@ -697,9 +697,9 @@ public class AhuDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_AHU05_dianJiaReGaoWen){
-            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_AHU05_fengJiQueFeng){
@@ -793,9 +793,9 @@ public class AhuDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_AHU06_dianJiaReGaoWen){
-            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_AHU06_fengJiQueFeng){
@@ -889,9 +889,9 @@ public class AhuDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_AHU07_dianJiaReGaoWen){
-            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_AHU07_fengJiQueFeng){
@@ -985,9 +985,9 @@ public class AhuDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_AHU08_dianJiaReGaoWen){
-            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_AHU08_fengJiQueFeng){
@@ -1081,9 +1081,9 @@ public class AhuDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_AHU09_dianJiaReGaoWen){
-            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_AHU09_fengJiQueFeng){
@@ -1177,9 +1177,9 @@ public class AhuDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_AHU10_dianJiaReGaoWen){
-            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_AHU10_fengJiQueFeng){
@@ -1274,9 +1274,9 @@ public class AhuDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_JK_1_dianJiaReGaoWen){
-            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_JK_1_fengJiQueFeng){
@@ -1369,9 +1369,9 @@ public class AhuDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_JK_2_dianJiaReGaoWen){
-            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_JK_2_fengJiQueFeng){
@@ -1464,9 +1464,9 @@ public class AhuDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_JK_3_dianJiaReGaoWen){
-            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_JK_3_fengJiQueFeng){
@@ -1560,9 +1560,9 @@ public class AhuDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_JK_XF_dianJiaReGaoWen){
-            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_JK_XF_fengJiQueFeng){
@@ -1658,9 +1658,9 @@ public class AhuDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_AHU301_dianJiaReGaoWen){
-            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_AHU301_fengJiQueFeng){
@@ -1753,9 +1753,9 @@ public class AhuDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_AHU302_dianJiaReGaoWen){
-            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_AHU302_fengJiQueFeng){
@@ -1849,9 +1849,9 @@ public class AhuDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_AHU303_dianJiaReGaoWen){
-            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_AHU303_fengJiQueFeng){
@@ -1945,9 +1945,9 @@ public class AhuDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_AHU304_dianJiaReGaoWen){
-            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_AHU304_fengJiQueFeng){
@@ -2041,9 +2041,9 @@ public class AhuDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_AHU305_dianJiaReGaoWen){
-            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_AHU305_fengJiQueFeng){
@@ -2137,9 +2137,9 @@ public class AhuDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_AHU306_dianJiaReGaoWen){
-            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_AHU306_fengJiQueFeng){
@@ -2233,9 +2233,9 @@ public class AhuDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_AHU307_dianJiaReGaoWen){
-            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_AHU307_fengJiQueFeng){
@@ -2329,9 +2329,9 @@ public class AhuDeviceDataActivity extends AppCompatActivity {
         }
 
         if (data_AHU308_dianJiaReGaoWen){
-            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
-        }else {
             bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_gray);
+        }else {
+            bt_dianJiaReGaoWen.setBackgroundResource(R.drawable.led_red);
         }
 
         if (data_AHU308_fengJiQueFeng){

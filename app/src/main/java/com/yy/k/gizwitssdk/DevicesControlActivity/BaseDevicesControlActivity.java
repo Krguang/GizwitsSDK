@@ -20,7 +20,6 @@ import com.gizwits.gizwifisdk.enumration.GizWifiErrorCode;
 import com.gizwits.gizwifisdk.listener.GizWifiDeviceListener;
 import com.qmuiteam.qmui.widget.QMUITopBar;
 import com.qmuiteam.qmui.widget.dialog.QMUITipDialog;
-import com.yy.k.gizwitssdk.R;
 
 import java.text.DecimalFormat;
 import java.util.Objects;

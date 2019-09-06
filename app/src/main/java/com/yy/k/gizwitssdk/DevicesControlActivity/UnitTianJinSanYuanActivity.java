@@ -1785,6 +1785,8 @@ public class UnitTianJinSanYuanActivity extends BaseDevicesControlActivity imple
     }
 
 
+
+
     private void parseReceiveData(ConcurrentHashMap<String, Object> dataMap) {
 
         if (dataMap.get("data") != null) {

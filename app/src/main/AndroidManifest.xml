@@ -52,10 +52,15 @@
         <activity android:name=".DevicesControlActivity.PauDeviceDataActivity"
             android:screenOrientation="portrait"
             />
-        <activity android:name=".DevicesControlActivity.UnitMonitorActivity" />
-        <activity android:name=".DevicesControlActivity.UnitTianJinSanYuanActivity" />
-        <activity android:name=".DevicesControlActivity.UnitKaiYuanGuKeActivity" />
-        <activity android:name=".DevicesControlActivity.AhukaiYuanDataActivity" />
-        <activity android:name=".DevicesControlActivity.PauKaiYuanDataActivity" />
+        <activity android:name=".DevicesControlActivity.UnitMonitorActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".DevicesControlActivity.UnitTianJinSanYuanActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".DevicesControlActivity.UnitKaiYuanGuKeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".DevicesControlActivity.AhukaiYuanDataActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".DevicesControlActivity.PauKaiYuanDataActivity"
+            android:screenOrientation="portrait"/>
     </application>
 </manifest>

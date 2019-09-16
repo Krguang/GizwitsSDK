@@ -1,44 +1,23 @@
 package com.yy.k.gizwitssdk.DevicesControlActivity;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.gizwits.gizwifisdk.api.GizWifiDevice;
-import com.gizwits.gizwifisdk.enumration.GizWifiDeviceNetStatus;
-import com.gizwits.gizwifisdk.enumration.GizWifiErrorCode;
 import com.qmuiteam.qmui.widget.QMUITopBar;
 import com.yy.k.gizwitssdk.CustomApplication;
 import com.yy.k.gizwitssdk.R;
 
 import java.text.DecimalFormat;
-import java.util.concurrent.ConcurrentHashMap;
-
 import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitDaLianActivity.*;
 import static com.yy.k.gizwitssdk.DevicesControlActivity.UnitTianJinSanYuanActivity.*;
 
-
 public class PauDeviceDataActivity extends AppCompatActivity {
-
 
     private static final String TAG = "krguang";
     private static final int AHU_HANDLER_UI = 106;
@@ -65,7 +44,6 @@ public class PauDeviceDataActivity extends AppCompatActivity {
     private Button bt_mieJunYunXing;
 
     String stringFromPrevious;
-
 
     private Handler mHandler = new Handler(){
         @Override

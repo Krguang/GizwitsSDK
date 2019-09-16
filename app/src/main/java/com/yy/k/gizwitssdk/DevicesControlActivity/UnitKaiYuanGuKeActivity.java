@@ -1064,6 +1064,8 @@ public class UnitKaiYuanGuKeActivity extends BaseDevicesControlActivity implemen
                 if (dataKey.equals(KEY_AHU03_MIEJUNYUNXING)) {
                     data_AHU03_mieJunYunXing = (Boolean) map.get(dataKey);
                 }
+
+
                 if (dataKey.equals(KEY_AHU04_FENGJIYIQIDONG)) {
                     data_AHU04_fengJiYiQiDong = (Boolean) map.get(dataKey);
                 }
@@ -1106,6 +1108,50 @@ public class UnitKaiYuanGuKeActivity extends BaseDevicesControlActivity implemen
                 if (dataKey.equals(KEY_AHU04_MIEJUNYUNXING)) {
                     data_AHU04_mieJunYunXing = (Boolean) map.get(dataKey);
                 }
+
+                if (dataKey.equals(KEY_AHU05_FENGJIYIQIDONG)) {
+                    data_AHU05_fengJiYiQiDong = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_AHU05_ZHIBANSTATUS)) {
+                    data_AHU05_zhiBanStatus = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_AHU05_DIANJIARE1)) {
+                    data_AHU05_dianJiaRe1 = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_AHU05_DIANJIARE2)) {
+                    data_AHU05_dianJiaRe2 = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_AHU05_DIANJIARE3)) {
+                    data_AHU05_dianJiaRe3 = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_AHU05_FENGJISTATUS)) {
+                    data_AHU05_fengJiStatus = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_AHU05_SHOUZIDONG)) {
+                    data_AHU05_shouZiDong = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_AHU05_DONGXIAJI)) {
+                    data_AHU05_dongXiaJi = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_AHU05_ZHONGXIAOBAOJING)) {
+                    data_AHU05_zhongXiaoBaoJing = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_AHU05_DIANJIAREGAOWEN)) {
+                    data_AHU05_dianJiaReGaoWen = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_AHU05_FENGJIQUEFENG)) {
+                    data_AHU05_fengJiQueFeng = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_AHU05_PAIFENGJIYIQIDONG)) {
+                    data_AHU05_paiFengJiYiQiDong = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_AHU05_DIWENPANGUAN)) {
+                    data_AHU05_diWenPanGuan = (Boolean) map.get(dataKey);
+                }
+                if (dataKey.equals(KEY_AHU05_MIEJUNYUNXING)) {
+                    data_AHU05_mieJunYunXing = (Boolean) map.get(dataKey);
+                }
+
                 if (dataKey.equals(KEY_PAU01_FENGJIYIQIDONG)) {
                     data_PAU01_fengJiYiQiDong = (Boolean) map.get(dataKey);
                 }
